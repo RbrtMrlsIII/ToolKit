@@ -32,17 +32,24 @@ Located in `skills/_grok-high-level/`:
 
 These are the condensed, always-available versions used by Grok.
 
+## Scope and fast-switching
+See `docs/SKILL_SCOPE_INDEX.md` for the field + project-type classification of every skill currently indexed here. The index is the switching map; each skill's `SKILL.md` remains the behavioral authority.
+
 ## Recommended Load Order
 
 1. `session-logger` (session start)
 2. `scale-adapter` (when size/complexity is a concern)
-2. `roots-definer` (when problem / architecture may be unclear or already exists)
-3. `phase-planner` (once roots are approved)
-4. `safety-reporter` (before high-impact actions)
-5. `observe` + `anti-pattern-checker`
-6. `record` → `understand` → `classify`
-7. `align` (+ `file-update-protocol`)
-8. `validate` → `census-runner`
-9. `endorse` → `advance` → `knowledge-distiller` → `minimalism-enforcer` → `checkpoint-creator`
+3. `roots-definer` (when problem / architecture may be unclear or already exists)
+4. `phase-planner` (once roots are approved)
+5. `safety-reporter` (before high-impact actions)
+6. `observe` + `anti-pattern-checker`
+7. `record` → `understand` → `classify`
+8. `align` (+ `file-update-protocol`)
+9. `validate` → `census-runner`
+10. `endorse` → `advance` → `knowledge-distiller` → `minimalism-enforcer` → `checkpoint-creator`
+
+## Knowledge direction
+
+Toolkit is a reusable upstream knowledge system. Consuming-project findings flow here only after validation + generalization. Toolkit does not automatically overwrite or push project-specific decisions downstream.
 
 Each skill lives at `skills/<id>/SKILL.md`.
