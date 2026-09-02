@@ -1,0 +1,30 @@
+#!/bin/bash
+# pre-commit hook — blocks commit if forbidden files, findings>10, missing distillation
+# Install: cp scripts/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+set -e
+echo "Running census pre-commit check..."
+
+# Find census.py
+CENSUS=""
+for p in "scripts/census.py" ".agent/census/census.py" "agent-repo-template/scripts/census.py"; do
+  if [ -f "$p" ]; then CENSUS="$p"; break; fi
+done
+
+if [ -z "$CENSUS" ]; then
+  echo "census.py not found, skipping"
+  exit 0
+fi
+
+python3 "$CENSUS" --base . --write
+STATUS=$?
+
+if [ $STATUS -ne 0 ]; then
+  echo ""
+  echo "❌ Census FAIL — commit blocked"
+  echo "Fix: remove forbidden files (patch*, final*), distill findings to PRODUCT-KNOWLEDGE.md, archive findings to keep <=10"
+  echo "Then run: python scripts/census.py --base . --write"
+  exit 1
+fi
+
+echo "✅ Census PASS — commit allowed"

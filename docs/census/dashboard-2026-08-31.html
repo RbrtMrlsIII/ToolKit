@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Census Dashboard 2026-08-31</title>
+<style>
+body{font-family:system-ui, sans-serif; margin:0; padding:20px; background:#0f0f0f; color:#eee}
+.card{background:#1a1a1a; border-radius:12px; padding:16px; margin:12px 0; border:1px solid #333}
+.grid{display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:12px}
+.stat{font-size:28px; font-weight:bold; color:#4ade80}
+.bar{height:12px; background:#333; border-radius:6px; overflow:hidden; margin:8px 0}
+.bar-fill{height:100%; background:linear-gradient(90deg,#4ade80,#22d3ee); width:0%}
+.badge{display:inline-block; padding:4px 8px; border-radius:6px; background:#333; font-size:12px; margin:2px}
+.pass{color:#4ade80} .fail{color:#f87171} .warn{color:#fbbf24}
+</style></head><body>
+<h1>📊 Census Dashboard — 2026-08-31</h1>
+<p>Universal Project Inventory + Cleanliness — Tabs, UI before 3D conversion</p>
+
+<div class="grid">
+<div class="card"><div>Tabs</div><div class="stat">0</div><div>Files, entries est: 0</div></div>
+<div class="card"><div>UI Screens</div><div class="stat">0</div><div>Pages/Views before 3D</div></div>
+<div class="card"><div>UI Components</div><div class="stat">0</div><div>Reusable components</div></div>
+<div class="card"><div>3D Models</div><div class="stat">0</div><div>glb/gltf/obj/fbx/usd</div></div>
+</div>
+
+<div class="card">
+<h3>🔄 Conversion Progress UI → 3D</h3>
+<div>Total UI before 3D: 0 | Tabs: 0 | 3D Models: 0</div>
+<div class="bar"><div class="bar-fill"></div></div>
+<div>0% estimated converted (0/0)</div>
+<div style="font-size:12px; opacity:0.7">Before 3D: 0 UI items, 0 tabs, 0 3D models. Progress: 0%</div>
+</div>
+
+<div class="grid">
+<div class="card"><h3>🧹 Cleanliness</h3>
+<div>Forbidden: 0 <span class="pass">PASS</span></div>
+<div>Findings: 1/10 <span class="pass">PASS</span></div>
+<div>Missing distillation: 0</div>
+<div>PK lines: 53/500</div>
+</div>
+<div class="card"><h3>📚 Knowledge</h3>
+<div>PRODUCT-KNOWLEDGE rows prevent repeat errors</div>
+<div>Anti-patterns checked: 0 rows</div>
+</div>
+</div>
+
+<div class="card"><h3>📂 Inventory Details</h3>
+<div><strong>tabs:</strong> 0 files<br><span class='badge'></span></div><br>
+</div>
+
+<div class="card"><h3>Next Actions</h3>
+<ul>
+<li>If tabs/UI > 3D models: plan conversion to 3D</li>
+<li>If findings >10: distill to PRODUCT-KNOWLEDGE.md then archive</li>
+<li>Run <code>python scripts/census.py --base . --write</code> after each XXX</li>
+</ul>
+</div>
+
+</body></html>

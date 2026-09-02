@@ -1,0 +1,59 @@
+{
+  "tabs": {
+    "count": 0,
+    "description": "UI tabs \u2014 counts how many tabs do we have (from files and config entries). Before 3D conversion.",
+    "files": [],
+    "total_matched": 0,
+    "estimated_tab_entries": 0
+  },
+  "ui_screens": {
+    "count": 0,
+    "description": "UI screens/pages/views before converting to 3D",
+    "files": [],
+    "total_matched": 0
+  },
+  "ui_components": {
+    "count": 0,
+    "description": "Reusable UI components",
+    "files": [],
+    "total_matched": 0
+  },
+  "routes": {
+    "count": 0,
+    "description": "Routes / navigation entries",
+    "files": [],
+    "total_matched": 0
+  },
+  "backend_endpoints": {
+    "count": 0,
+    "description": "Backend endpoints / API routes",
+    "files": [],
+    "total_matched": 0
+  },
+  "models_3d": {
+    "count": 0,
+    "description": "3D assets before/after conversion \u2014 count before converting to 3D",
+    "files": [],
+    "total_matched": 0
+  },
+  "textures_materials": {
+    "count": 0,
+    "description": "Textures and materials for 3D",
+    "files": [],
+    "total_matched": 0
+  },
+  "data_models": {
+    "count": 0,
+    "description": "Data models / schemas / tables",
+    "files": [],
+    "total_matched": 0
+  },
+  "_conversion_summary": {
+    "tabs_total": 0,
+    "ui_screens_total": 0,
+    "ui_components_total": 0,
+    "models_3d_total": 0,
+    "total_ui_before_3d": 0,
+    "conversion_note": "You have 0 tabs, 0 UI items (screens+components), 0 3D models. Before converting to 3D, census shows inventory. After conversion, track models_3d converted vs UI remaining."
+  }
+}

@@ -1,0 +1,18 @@
+name: Census — Inventory + Cleanliness
+on: [push, pull_request]
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.9' }
+      - run: pip install mysql-connector-python || true
+      - run: python scripts/census.py --base . --write
+      - run: python test-files-repo/py/test_minimalism.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: census-reports
+          path: |
+            .agent/census/
+            docs/census/

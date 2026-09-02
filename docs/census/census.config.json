@@ -1,0 +1,140 @@
+{
+  "version": "3.0.0-universal-inventory",
+  "description": "Universal census config \u2014 project inventory tool: tabs, UI, 3D, routes, applicable to all project types. Edit to add your project-specific patterns.",
+  "project_types": [
+    "web",
+    "mobile",
+    "backend",
+    "3d",
+    "game",
+    "generic"
+  ],
+  "max_findings": 10,
+  "max_knowledge_lines": 500,
+  "forbidden_patterns": [
+    "patch*",
+    "final*.md",
+    "final-*.md",
+    "fix*.md",
+    "dd*.md",
+    "temp*",
+    "backup*",
+    "old*",
+    "new*.md",
+    "copy*",
+    "v1*",
+    "test2*"
+  ],
+  "inventory": {
+    "tabs": {
+      "description": "UI tabs \u2014 counts how many tabs do we have (from files and config entries). Before 3D conversion.",
+      "file_patterns": [
+        "**/tabs.*",
+        "**/tabBar.*",
+        "**/*Tabs.*",
+        "**/navigation/*tabs*",
+        "**/config/tabs*",
+        "**/*tab*.json"
+      ],
+      "content_patterns": [
+        "tabs",
+        "TabBar",
+        "BottomTabs",
+        "TopTabs"
+      ],
+      "count_method": "files + entries in config (e.g., tabs array length in navigation files)"
+    },
+    "ui_screens": {
+      "description": "UI screens/pages/views before converting to 3D",
+      "file_patterns": [
+        "src/screens/**/*.*",
+        "src/pages/**/*.*",
+        "src/views/**/*.*",
+        "app/**/page.*",
+        "pages/**/*.*",
+        "src/app/**/screen.*"
+      ],
+      "exclude": [
+        "node_modules",
+        ".next",
+        "dist"
+      ]
+    },
+    "ui_components": {
+      "description": "Reusable UI components",
+      "file_patterns": [
+        "src/components/**/*.*",
+        "components/**/*.*",
+        "src/ui/**/*.*",
+        "src/common/components/**/*.*"
+      ]
+    },
+    "routes": {
+      "description": "Routes / navigation entries",
+      "file_patterns": [
+        "**/routes/**/*.*",
+        "**/router.*",
+        "**/navigation/**/*.*",
+        "src/app/**/layout.*"
+      ]
+    },
+    "backend_endpoints": {
+      "description": "Backend endpoints / API routes",
+      "file_patterns": [
+        "src/backend/routes/**/*.*",
+        "src/api/**/*.*",
+        "api/**/*.*",
+        "server/routes/**/*.*"
+      ]
+    },
+    "models_3d": {
+      "description": "3D assets before/after conversion \u2014 count before converting to 3D",
+      "file_patterns": [
+        "**/*.glb",
+        "**/*.gltf",
+        "**/*.obj",
+        "**/*.fbx",
+        "**/*.usd",
+        "**/*.usda",
+        "**/*.usdc",
+        "**/*.stl",
+        "**/*.blend",
+        "**/*.3mf"
+      ],
+      "conversion_status": "track before -> after (e.g., obj->glb, fbx->glb)"
+    },
+    "textures_materials": {
+      "description": "Textures and materials for 3D",
+      "file_patterns": [
+        "**/textures/**/*.*",
+        "**/materials/**/*.*",
+        "**/*.png",
+        "**/*.jpg",
+        "**/*.hdr",
+        "**/*.exr"
+      ],
+      "filter": "only in assets/3d or assets/textures"
+    },
+    "data_models": {
+      "description": "Data models / schemas / tables",
+      "file_patterns": [
+        "**/models/**/*.*",
+        "**/schemas/**/*.*",
+        "**/entities/**/*.*",
+        "prisma/schema.*",
+        "**/*.sql"
+      ]
+    }
+  },
+  "conversion_tracking": {
+    "description": "Track conversion from UI/2D to 3D: how many UI before converting to 3D, how many converted, how many remaining",
+    "fields": [
+      "tabs_total",
+      "ui_screens_total",
+      "ui_screens_converted_to_3d",
+      "models_3d_total",
+      "models_3d_converted",
+      "conversion_progress_percent"
+    ]
+  }
+}
