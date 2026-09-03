@@ -8,6 +8,7 @@
 
 ## Planning & Safety
 - **phase-planner** — Propose execution phase → wait for approval → plant or branch on MASTERPLAN.md
+- **backend-first-clarifier** — Clarify the backend authority model with the user after an idea is established and before implementation begins
 - **safety-reporter** — Warn on destructive / high-impact / SYSTEMIC actions
 
 ## Core Execution (O-R-U-C-A-V-E-A)
@@ -19,8 +20,8 @@ anti-pattern-checker, knowledge-distiller, minimalism-enforcer, checkpoint-creat
 ## Governance
 census-runner, reconciliation-manager, investigation-manager, contract-manager
 
-## Continuity & Structure
-session-logger, file-update-protocol, canonical-build, dictionary-manager
+## Continuity & Handover
+session-logger, file-update-protocol, target-project-handover, canonical-build, dictionary-manager
 
 ## High-level Grok Skills (absorbed)
 Located in `skills/_grok-high-level/`:
@@ -41,12 +42,14 @@ See `docs/SKILL_SCOPE_INDEX.md` for the field + project-type classification of e
 2. `scale-adapter` (when size/complexity is a concern)
 3. `roots-definer` (when problem / architecture may be unclear or already exists)
 4. `phase-planner` (once roots are approved)
-5. `safety-reporter` (before high-impact actions)
-6. `observe` + `anti-pattern-checker`
-7. `record` → `understand` → `classify`
-8. `align` (+ `file-update-protocol`)
-9. `validate` → `census-runner`
-10. `endorse` → `advance` → `knowledge-distiller` → `minimalism-enforcer` → `checkpoint-creator`
+5. `backend-first-clarifier` (before implementation)
+6. `safety-reporter` (before high-impact actions)
+7. `observe` + `anti-pattern-checker`
+8. `record` → `understand` → `classify`
+9. `align` (+ `file-update-protocol`)
+10. `validate` → `census-runner`
+11. `endorse` → `advance` → `knowledge-distiller` → `minimalism-enforcer`
+12. `target-project-handover` + `checkpoint-creator`
 
 ## Knowledge direction
 
