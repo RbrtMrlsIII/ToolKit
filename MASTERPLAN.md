@@ -148,7 +148,7 @@ builds/ outputs only
 | 000 | Foundation | scaffold | toolkit | SYSTEMIC | ADVANCED | 000-scaffold-toolkit.md |
 | 001 | Foundation | foundation | project-scaffold | BOUNDED | ADVANCED | 001-foundation-project-scaffold.md |
 | 002 | Foundation | foundation | project-status | BOUNDED | ALIGNED | 002-foundation-project-status.md |
-| 003 | Foundation | governance | self-protecting-universal-foundation | SYSTEMIC | RECORDED | docs/TOOLKIT_ARCHITECTURE.md |
+| 003 | Foundation | governance | self-protecting-universal-foundation | SYSTEMIC | VALIDATED_STATIC | validation/evidence/003-self-protecting-universal-foundation.md |
 | 004 | Foundation | responsibility | responsibility-unit-seat-model | BOUNDED | TODO | docs/WEB_AI_SEAT_FOUNDATION.md |
 | 005 | Foundation | skills | dynamic-skill-resolution-and-scale | SYSTEMIC | TODO | docs/SKILL_SCOPE_INDEX.md |
 | 006 | Foundation | knowledge | promotion-and-generalization | BOUNDED | TODO | PRODUCT-KNOWLEDGE.md |
@@ -157,7 +157,7 @@ builds/ outputs only
 | 009 | Foundation | responsibility | multi-agent-responsibility-allocation | BOUNDED | TODO | docs/WEB_AI_SEAT_FOUNDATION.md |
 | 010 | Foundation | learning | cross-project-learning-feedback | SYSTEMIC | TODO | docs/KNOWLEDGE_UPSTREAM_BOUNDARY.md |
 
-**Status values:** `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`.
+**Status values:** `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED_STATIC → VALIDATED → ENDORSED → ADVANCED`.
 
 **Rules**
 - Never invent an XXX that is not first proposed and approved.
@@ -186,12 +186,13 @@ Prefer LOCAL or BOUNDED. SYSTEMIC work requires explicit attention to user autho
 | Item | Value |
 |---|---|
 | **Current XXX** | 003 |
-| **Status** | RECORDED |
+| **Status** | VALIDATED_STATIC |
 | **Current Field** | Foundation |
 | **Next XXX** | 004 |
 | **Open Investigations** | none |
 | **Baseline focus** | self-protecting universal operating foundation |
 | **Knowledge transfer** | TeamAi canonical-structure lesson generalized upstream |
+| **Validation** | Static governance/evidence validation complete; GitHub Actions execution pending |
 | **Deployment guide** | `docs/USER_MANUAL_DEPLOYMENT.md` |
 
 ---
