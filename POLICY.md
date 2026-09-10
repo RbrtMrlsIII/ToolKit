@@ -1,185 +1,272 @@
 # POLICY.md — Universal Project Constitution
 
-> The hard rules that every AI agent and human must obey.  
-> Applicable to all project types (web, mobile, backend, 3D, game, generic).
+> The hard rules that every AI agent and human must obey. Applicable to all project types (web, mobile, backend, 3D, game, generic).
 
 ---
 
-## 1. Source-of-Truth (Product Law)
+## 0. Human User Authority
 
-**This is the highest law of the project.**
+The **user / project owner is the highest product authority**.
 
-The Source-of-Truth is the single, authoritative foundation that all other canonical files, decisions, code, and knowledge must ultimately serve and never contradict.
+The Toolkit must interpret and preserve the user's approved vision rather than replacing it with the newest Agent output, code state, provider default, historical wording, or implementation preference.
 
-### What counts as Source-of-Truth
-- Product vision and non-negotiable product constraints (usually expressed in MASTERPLAN + contracts)
-- Approved contracts (`docs/contracts/`)
-- Validated Patterns and Anti-Patterns in `PRODUCT-KNOWLEDGE.md` (once endorsed)
-- The 6 Canonical Files themselves (once endorsed)
+Material direction follows this chain:
 
-### Rules
-- No code, finding, or decision may permanently violate the Source-of-Truth.
-- When conflict arises, Source-of-Truth wins. Create an investigation, do not silently override.
-- Changing the Source-of-Truth itself requires explicit endorsement and a new XXX.
+```text
+user command / vision
+→ consult Agents
+→ user approval
+→ PRODUCT_LAW.md reconstruction
+→ MASTERPLAN.md slice / checklist
+→ skills + knowledge
+→ O-R-U-C-A-V-E-A
+→ action
+→ validation
+→ evidence
+→ complete log / handover
+→ endorsement
+→ PRODUCT-KNOWLEDGE.md growth
+```
 
-The Source-of-Truth is the foundation upon which every canonical file rests.
+Agents may analyze and propose before approval. They may not silently convert their proposal into product authority.
 
----
+## 1. Product Law / Source-of-Truth
+
+`PRODUCT_LAW.md` is the canonical reconstruction of the user's approved product meaning, purpose, invariants, boundaries, and non-negotiable outcomes for the current Toolkit project.
+
+Product Law is the highest **project artifact authority**. It sits below the user's direct authority and above POLICY, MASTERPLAN, skills, tools, implementation, and historical material.
+
+Rules:
+
+- No code, finding, skill, tool, provider, or decision may permanently violate Product Law.
+- When conflict arises, stop and investigate. Do not silently override Product Law.
+- Changing Product Law requires explicit user approval and a recorded change scope.
+- POLICY governs safe execution; it must not redefine product meaning.
+- MASTERPLAN translates approved Product Law into ordered slices/checklists; it must not silently change product intent.
 
 ## 2. Layer Separation (Critical)
 
-The project has two strictly separated layers:
+The project has two strictly separated layers.
 
-### A. Governance / Canonical Layer (this toolkit)
-Contains only:
-- The 6 Canonical Files at root
-- `.agent/` (machine state)
-- `docs/` (findings, knowledge, handover, contracts, census, etc.)
-- `skills/`, `scripts/`, `prompts/`, `validation/`, `builds/`
+### A. Governance / Canonical Layer
+Contains:
+- root canonical files;
+- `.agent/` machine state;
+- `docs/` findings, knowledge, contracts, history, handover, validation;
+- `skills/`, `scripts/`, `prompts/`, `validation/`, `builds/`.
 
-**Purpose:** Continuity, discipline, knowledge, approval, inventory.
+Purpose: continuity, authority, knowledge, discipline, inventory, evidence, reusable execution.
 
-### B. Project-Development Layer (the actual product)
-Contains only:
-- `src/` (or equivalent: `app/`, `lib/`, `packages/`, etc.)
-- Product-specific configuration that is **not** governance
-- Tests that belong to the product code
+### B. Project-Development Layer
+Contains product code in `src/` or the consuming project's equivalent (`app/`, `lib/`, `packages/`, etc.) plus product-specific configuration and tests that belong to the product.
 
-**Purpose:** The real software being built.
+Hard rules:
 
-### Hard Rules
-- **Never** put product business logic, UI components, or domain code into the Governance layer.
-- **Never** put findings, knowledge, session logs, or canonical rules into `src/`.
-- `builds/` is the only allowed place for build outputs (never inside `src/` or `docs/`).
-- New top-level folders require endorsement.
+- Never put product business logic, UI components, or domain code into the governance layer.
+- Never put findings, knowledge, session logs, or canonical rules into product code.
+- Builds belong only in allowed build locations.
+- New top-level folders require explicit endorsement.
 
-This separation keeps the agent operating system clean and the product code free of governance noise.
+## 3. Canonical Root Structure
 
----
+The Toolkit core has these seven canonical root files:
 
-## 3. Canonical Structure — Only These at Root
-
-```
-/README.md                  ← Front-door (wiring + status only)
+```text
+/README.md                  ← Front door, wiring + status only
+/PRODUCT_LAW.md             ← User-approved product meaning + invariants
 /AI_ASSISTANT_READ_ME.md    ← Agent Operating System
 /MASTERPLAN.md              ← Conceptual map + XXX checklist
-/POLICY.md                  ← This constitution
+/POLICY.md                  ← Governance constitution
 /PRODUCT-KNOWLEDGE.md       ← Permanent distilled brain
 /ENDORSEMENT.md             ← Approval ledger
+```
 
-/.agent/                    ← Machine-readable state
-/docs/                      ← Human-readable working + permanent knowledge
-/skills/                    ← Loadable skills
-/scripts/                   ← Census, knowledge tools, etc.
-/prompts/                   ← Mobile paste prompts
-/validation/                ← Evidence
-/builds/                    ← Only place for build outputs
-/src/                       ← Project-Development Layer (code only)
+Supporting canonical structure:
+
+```text
+/.agent/                     ← machine state
+/docs/                       ← human-readable working/permanent knowledge
+/skills/                     ← loadable procedures
+/scripts/                    ← executable governance helpers
+/prompts/                    ← mobile-ready prompts
+/validation/                 ← validation evidence
+/builds/                     ← build outputs only
 ```
 
 No other root files or folders without endorsement.
 
----
-
 ## 4. File Naming — Anti-Chaos
 
-**FORBIDDEN names:**  
-`patch*`, `final*`, `fix*`, `temp*`, `backup*`, `old*`, `new*`, `v1*`, `copy*`, `test2*`, `dd*`
+**Forbidden names:** `patch*`, `final*`, `fix*`, `temp*`, `backup*`, `old*`, `new*`, `v1*`, `copy*`, `test2*`, `dd*`.
 
-**REQUIRED form for findings / handover / evidence:**  
-`XXX-phase-target.md`  
-Examples: `006-backend-auth-api.md`, `000-scaffold-toolkit.md`
+Findings / handover / evidence use `XXX-phase-target.md`.
 
-XXX is the 3-digit number from MASTERPLAN. One XXX at a time.
+XXX is the 3-digit execution identifier from MASTERPLAN. One XXX is active at a time.
 
----
-
-## 5. Role of the Six Canonical Files
+## 5. Role of the Canonical Files
 
 | File | MUST contain | MUST NOT contain |
-|------|--------------|------------------|
-| README.md | Title, purpose (1–2 lines), links to the other 5, current status. < 80 lines | Findings, logs, code, TODOs, knowledge |
-| AI_ASSISTANT_READ_ME.md | Reading order, O-R-U-C-A-V-E-A, 5 evidences, minimalism, mobile constraints | Business logic, product details |
-| MASTERPLAN.md | Vision, authority→consumer map, impact definitions, current XXX focus, checklist | Execution logs, raw findings |
-| POLICY.md | Structure, naming, knowledge lifecycle, file-update protocol, enforcement | Current status or temporary notes |
-| PRODUCT-KNOWLEDGE.md | Dense tables only: Validated Patterns, Anti-Patterns, Gotchas, Quirks, Minimalism Log | Unvalidated guesses, raw logs |
-| ENDORSEMENT.md | Human-approved XXX entries + knowledge-distillation proof | Self-approved drafts |
+|---|---|---|
+| `README.md` | Front-door purpose, navigation, status | Findings, logs, code, raw knowledge, patch notes |
+| `PRODUCT_LAW.md` | User-approved product meaning, invariants, authority boundaries | Raw execution logs, unapproved implementation detail |
+| `AI_ASSISTANT_READ_ME.md` | Reading order, execution gates, evidence and continuity rules | Product implementation detail |
+| `MASTERPLAN.md` | Vision map, fields, current XXX, checklist, ordered slices | Raw findings, session logs |
+| `POLICY.md` | Rules, authority, structure, change protocol, enforcement | Temporary project status |
+| `PRODUCT-KNOWLEDGE.md` | Dense validated patterns, anti-patterns, conceptual relationships, minimalism history | Unvalidated guesses, raw logs |
+| `ENDORSEMENT.md` | Human/authorized approval ledger | Self-approved drafts |
 
----
+## 6. Knowledge Lifecycle and Growth
 
-## 6. Knowledge Minimalism Lifecycle
+Toolkit knowledge grows while active documents remain controlled and compact.
 
-**Goal:** Active project = 6 canonical files + ≤ 10 findings + code.  
-Knowledge increases. Files stay minimal.
+```text
+EPHEMERAL finding
+   → validated evidence
+   → generalized lesson
+   → CANDIDATE
+   → endorsement
+   → ENDORSED knowledge
+   → skill / governance evolution
+```
 
-1. **Transient** — `docs/findings/XXX-….md` (max 10, lifetime = one XXX)
-2. **Distill** (mandatory at Advance) — Add row(s) to PRODUCT-KNOWLEDGE.md + Minimalism Log entry
-3. **Archive** — Move finding to `docs/archive/` with distillation proof header
-4. **Compress / Delete** — After 2 checkpoints + endorsement + Minimalism Log proof, may compress to `docs/knowledge-archive/` or delete
+Scope classes are:
 
-Anti-Patterns section of PRODUCT-KNOWLEDGE.md is the most important. Skipping the anti-pattern check before Classify is a hard violation.
+`UNIVERSAL | ADAPTABLE | CONSUMER-SPECIFIC | EPHEMERAL | HISTORICAL | CANDIDATE | ENDORSED`.
 
----
+Only validated and generalized consumer lessons may become Toolkit knowledge. Product-specific rules remain downstream.
 
-## 7. File Update Protocol (Mandatory)
+`PRODUCT-KNOWLEDGE.md` must grow in conceptual depth: it records how fields, responsibilities, skills, artifacts, providers/runtime constraints, verification, and consumer patterns connect. It must not become a dump of raw logs.
 
-When you change **any** file you MUST update the full chain in the same session, with timestamps:
+Never delete a knowledge row. Supersede by reference when necessary. Compress/archive only with explicit proof.
 
-1. Source file (timestamp comment when practical)
-2. Session log (`.agent/sessions/` + `docs/sessions/`) — must be started at the beginning of the session
-3. `registry.json` + `state.json`
-4. Checkpoint + handover
-5. PRODUCT-KNOWLEDGE.md (if a pattern was learned)
-6. Dictionary (if new entity)
-7. Builds (if buildable)
-8. Census (`python scripts/census.py --base . --write`)
-9. Architecture map (if structure changed)
-10. Finalize session log (end timestamp + complete_trace)
+## 7. Baseline Freezes Drive Skill Growth
 
-Session logs that only appear at the end of a session are invalid → census FAIL.
+A validated execution baseline or frozen slice triggers a skill-coverage review.
 
----
+```text
+baseline freezes
+   ↓
+repeatable procedure
+   ↓
+skill coverage review
+   ↓
+reuse existing skill OR create/refine skill
+   ↓
+scope + dependencies + verification recorded
+   ↓
+future slices use smallest sufficient bundle
+```
 
-## 8. Builds
+Skills are living infrastructure. They may be added, split, refined, deprecated, or retired as validated execution pressure grows.
 
-Only allowed locations:
-- `builds/XXX-phase-target/` (and `builds/latest/`)
-- `.agent/builds/` (machine state)
+A new skill does not create new authority. Skill count may grow; authority remains stable.
 
-Never put builds inside `src/` or `docs/`.
+## 8. Canonical Change Contract
 
----
+Every meaningful change declares:
 
-## 9. Dictionary
+1. user objective;
+2. authority / Product Law scope;
+3. current Masterplan XXX;
+4. affected canonical artifacts;
+5. affected skills and knowledge;
+6. protected unrelated structure;
+7. verification plan;
+8. evidence target;
+9. endorsement requirement.
 
-When the project grows (many tabs, screens, 3D models, endpoints, terms):
-- Maintain `.agent/dictionary/dictionary.json`
-- Auto-generate `docs/dictionary/DICTIONARY.md`
-- Update in the same session as the change (File Update Protocol)
+See `docs/CHANGE_CONTRACT.md`.
 
----
+## 9. Canonical Structure Preservation
 
-## 10. Enforcement (Census)
+Canonical documents are knowledge structures, not disposable prose.
 
-Census FAIL conditions include:
-- Forbidden filenames
-- Active findings > 10
-- Missing distillation
-- Incomplete session log
-- File changed without updating registry / state / checkpoint
-- Repeating a recorded Anti-Pattern without investigation
-- Builds placed in forbidden locations
-- Dictionary missing when entity count is high
+When changing a canonical document:
 
----
+1. preserve all unrelated canonical content;
+2. change only the authorized semantic scope;
+3. detect unexpected deletions;
+4. detect unexpected section loss;
+5. verify structure before merge/release;
+6. fail closed on unexplained canonical deletion.
 
-## 11. Hierarchy of Authority
+The existence of a new expected claim does not prove document integrity.
 
-1. **Source-of-Truth** (Product Law)
-2. **POLICY.md** (this constitution)
-3. **Endorsed PRODUCT-KNOWLEDGE.md** (especially Anti-Patterns)
-4. **MASTERPLAN.md** + approved contracts
-5. Current checkpoint + registry
-6. Everything else
+The reusable guard is `skills/governance/canonical-integrity/SKILL.md` with `scripts/canonical-integrity.py`.
 
-When in doubt, stop and create an investigation file rather than guessing.
+## 10. Instruction vs Authorization
+
+```text
+Skill                 → HOW
+Policy / workspace    → WHETHER
+Permission             → WHETHER THE Agent MAY ACT
+PRODUCT_LAW            → WHAT IS TRUE
+MASTERPLAN             → WHAT APPROVED SLICE IS NEXT
+Evidence               → WHAT WAS PROVEN
+```
+
+A skill never grants authorization for repository mutation, deployment, billing, production access, credentials, or other privileged operations.
+
+## 11. Five Evidences and Completion
+
+Every completed XXX must leave:
+
+1. human finding;
+2. machine state;
+3. validation evidence;
+4. checkpoint + handover;
+5. knowledge distillation.
+
+A passing test without complete evidence is not a complete slice.
+
+## 12. File Update Protocol
+
+When changing any governed artifact, synchronize the applicable chain in the same session:
+
+`source → session log → registry/state → checkpoint/handover → knowledge (when learned) → dictionary (when needed) → build evidence (when buildable) → census → architecture map (when structure changes) → finalized log`.
+
+Session logging begins at session start, not at the end.
+
+## 13. Builds
+
+Allowed build locations:
+
+- `builds/XXX-phase-target/`
+- `builds/latest/`
+- `.agent/builds/`
+
+Never put builds into product source or knowledge documents.
+
+## 14. Dictionary
+
+As project entities grow, maintain machine dictionary plus generated human dictionary. Update both in the same governed change.
+
+## 15. Enforcement
+
+Census and governance validation must fail on:
+
+- forbidden filenames;
+- uncontrolled active findings;
+- missing knowledge distillation;
+- incomplete session logs;
+- file changes without required continuity updates;
+- repeated recorded anti-patterns without investigation;
+- builds in forbidden locations;
+- missing dictionary where required;
+- unexplained canonical section loss;
+- suspicious canonical deletion;
+- claim/evidence or scope/skill inconsistency when those relationships are declared.
+
+Default posture is **fail closed** when authority, current state, or structural integrity cannot be established.
+
+## 16. Hierarchy of Authority
+
+1. User / project owner intent
+2. `PRODUCT_LAW.md`
+3. `POLICY.md`
+4. Endorsed `PRODUCT-KNOWLEDGE.md`
+5. `MASTERPLAN.md` + endorsed contracts
+6. Current checkpoint + machine state
+7. Everything else
+
+When uncertain: stop, preserve the current state, record an investigation, and ask for the missing authority rather than guessing.
