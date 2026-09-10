@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-09-11T05:35:00+08:00",
+  "current_xxx": "003-self-protecting-universal-foundation",
+  "todo": [
+    "004-responsibility-unit-seat-model",
+    "005-dynamic-skill-resolution-and-scale",
+    "006-knowledge-promotion-and-generalization",
+    "007-canonical-change-integrity",
+    "008-bidirectional-evidence-claim-validation",
+    "009-multi-agent-responsibility-allocation",
+    "010-cross-project-learning-feedback"
+  ],
+  "completed": [
+    "000-scaffold-toolkit",
+    "001-foundation-project-scaffold",
+    "002-foundation-project-status"
+  ],
+  "knowledge_index": [
+    "PRODUCT-KNOWLEDGE.md §1–§4",
+    "docs/history/TEAMAI_CANONICAL_STRUCTURE_FAILURE_2026-09-10.md"
+  ],
+  "status": "003 static validation complete; CI pending; endorsement pending",
+  "project_name": "Universal AGENT Toolkit"
+}
