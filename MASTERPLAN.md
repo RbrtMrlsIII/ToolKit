@@ -1,48 +1,45 @@
 # MASTERPLAN.md — Expandable Project Planning System
 
-> **Single source of truth for XXX numbering and progress.**  
-> Structured so any human or machine can open this file and instantly see  
-> where development stopped in each field (Foundation, Backend, 3rd-Party, Frontend, etc.).  
-> No raw logs or findings here — only vision, map, and checklist.
+> **Single source of truth for XXX numbering and progress.** Structured so any human or machine can open this file and see where development stopped in each field. No raw logs or findings here: only vision, map, and checklist.
 
 ---
 
-## 1. Project Vision (tied to Source-of-Truth)
+## 1. Project Vision (tied to Product Law)
 
-**What is this project?**  
-Universal AGENT Toolkit — reusable operating system for AI-assisted projects with strong continuity, anti-repeat knowledge, and disciplined execution.
+**What is this project?**
+Universal AGENT Toolkit: a reusable operating system for AI-assisted projects with strong continuity, user-first authority, anti-repeat knowledge, disciplined execution, dynamic skills, and scalable responsibility allocation.
 
-**Source-of-Truth statement**  
-The 6 Canonical Files + Layer Separation (`src/` = product code only) + PRODUCT-KNOWLEDGE Anti-Patterns form the non-negotiable foundation (see POLICY.md §1).
+**Source-of-Truth statement**
+The user's approved product vision is highest authority. `PRODUCT_LAW.md` is its canonical project reconstruction. `POLICY.md`, `MASTERPLAN.md`, skills, tools, implementation, and evidence must serve that authority and may not silently redefine it.
 
-**Primary Authority → Consumers**  
-- Authority: POLICY.md + this MASTERPLAN + docs/contracts/  
-- Consumers: All future agents and all projects built with this toolkit  
-- Ownership: Toolkit maintainers / project leads
+**Primary Authority → Consumers**
+- Authority: User intent → `PRODUCT_LAW.md` → `POLICY.md` → approved `MASTERPLAN.md`
+- Consumers: all future Agents, WebAi seats, and projects using the Toolkit
+- Ownership: Toolkit maintainers / project leads; consuming projects retain their own product/domain/provider authority
 
 ---
 
 ## 2. Layer Map
 
-```
+```text
 Governance / Canonical Layer          Project-Development Layer
 ────────────────────────────          ─────────────────────────
-6 Canonical Files (root)              src/   ← PRODUCT CODE ONLY
-.agent/   (machine state)
-docs/     (knowledge & working memory)
-skills/ + scripts/
-builds/   (outputs only)
+Product Law + canonical files         src/ / app/ / lib/ / packages/
+.agent/ machine state                 product code + product tests
+docs/ knowledge + working memory
+skills/ reusable procedures
+scripts/ governance tools
+builds/ outputs only
 ```
 
 ---
 
 ## 3. Field-Based Conceptual Map
 
-> Keep every phase grouped under its field.  
-> This is what makes progress and stopping points obvious.
+> Keep every phase grouped under its field. Cross-field relationships belong in `PRODUCT-KNOWLEDGE.md` and architecture docs.
 
 ### Field 0 — Foundation / Toolkit
-```
+```text
 000-scaffold-toolkit
   Authority : POLICY.md + toolkit itself
   Consumers : All future agents + projects
@@ -56,115 +53,176 @@ builds/   (outputs only)
   Status    : ADVANCED
 
 002-foundation-project-status
-  Authority : scripts/ + .agent/continuity/
+  Authority : scripts/ + continuity state
   Consumers : All agents + humans opening any project
   Impact    : BOUNDED
-  Status    : IN PROGRESS
+  Status    : ALIGNED
+
+003-self-protecting-universal-foundation
+  Authority : PRODUCT_LAW.md + POLICY.md
+  Consumers : Toolkit governance, skills, WebAi seats, consuming projects
+  Impact    : SYSTEMIC
+  Status    : RECORDED
+
+004-responsibility-unit-seat-model
+  Authority : PRODUCT_LAW.md + WEB_AI_SEAT_FOUNDATION
+  Consumers : WebAi seats and scalable Agent populations
+  Impact    : BOUNDED
+  Status    : TODO
+
+005-dynamic-skill-resolution-and-scale
+  Authority : Skill scope contracts + MASTERPLAN
+  Consumers : all project/field/task combinations
+  Impact    : SYSTEMIC
+  Status    : TODO
+
+006-knowledge-promotion-and-generalization
+  Authority : PRODUCT-KNOWLEDGE + endorsement rules
+  Consumers : Toolkit learning loop + consuming projects
+  Impact    : BOUNDED
+  Status    : TODO
+
+007-canonical-change-integrity
+  Authority : POLICY + CHANGE_CONTRACT + integrity validator
+  Consumers : canonical documentation and governance merges
+  Impact    : SYSTEMIC
+  Status    : TODO
+
+008-bidirectional-evidence-claim-validation
+  Authority : Product Law + evidence contracts
+  Consumers : skills, docs, implementation, verification
+  Impact    : SYSTEMIC
+  Status    : TODO
+
+009-multi-agent-responsibility-allocation
+  Authority : responsibility model + authorization
+  Consumers : 2–8 Agent/WebAi populations
+  Impact    : BOUNDED
+  Status    : TODO
+
+010-cross-project-learning-feedback
+  Authority : upstream boundary + endorsement
+  Consumers : Toolkit + multiple consuming projects
+  Impact    : SYSTEMIC
+  Status    : TODO
 ```
 
 ### Field 1 — Backend
-```
-(empty — plant new XXXs here via phase-planner)
+```text
+(empty — Toolkit supplies patterns; concrete backend remains consumer-specific unless generalized)
 ```
 
 ### Field 2 — 3rd-Party / Integrations
-```
-(empty — plant new XXXs here via phase-planner)
+```text
+(empty)
 ```
 
 ### Field 3 — Frontend / UI
-```
-(empty — plant new XXXs here via phase-planner)
+```text
+(empty)
 ```
 
 ### Field 4 — Shared / Domain
-```
+```text
 (empty)
 ```
 
 ### Field 5 — Integration & Validation
-```
-(empty)
+```text
+(empty — universal validation mechanisms are developed under Field 0 and later consumed here)
 ```
 
 ### Field 6 — Release / Operations
-```
-(empty)
+```text
+(empty — human deployment guide is defined under Field 0; provider details remain downstream)
 ```
 
-> When a new phase is approved, add it under the correct Field above  
-> and also add the corresponding row in the Execution Checklist below.
+> New work is planted only after approval and must be assigned to the correct Field and XXX.
 
 ---
 
 ## 4. Execution Checklist (THE only source for XXX numbers)
 
-| XXX | Field              | Phase     | Target              | Impact    | Status   | Evidence                     |
-|-----|--------------------|-----------|---------------------|-----------|----------|------------------------------|
-| 000 | Foundation         | scaffold  | toolkit             | SYSTEMIC  | ADVANCED | 000-scaffold-toolkit.md      |
-| 001 | Foundation         | foundation| project-scaffold    | BOUNDED   | ADVANCED | 001-foundation-project-scaffold.md |
-| 002 | Foundation         | foundation| project-status      | BOUNDED   | ALIGNED  | 002-foundation-project-status.md   |
+| XXX | Field | Phase | Target | Impact | Status | Evidence |
+|-----|---|---|---|---|---|---|
+| 000 | Foundation | scaffold | toolkit | SYSTEMIC | ADVANCED | 000-scaffold-toolkit.md |
+| 001 | Foundation | foundation | project-scaffold | BOUNDED | ADVANCED | 001-foundation-project-scaffold.md |
+| 002 | Foundation | foundation | project-status | BOUNDED | ALIGNED | 002-foundation-project-status.md |
+| 003 | Foundation | governance | self-protecting-universal-foundation | SYSTEMIC | RECORDED | docs/TOOLKIT_ARCHITECTURE.md |
+| 004 | Foundation | responsibility | responsibility-unit-seat-model | BOUNDED | TODO | docs/WEB_AI_SEAT_FOUNDATION.md |
+| 005 | Foundation | skills | dynamic-skill-resolution-and-scale | SYSTEMIC | TODO | docs/SKILL_SCOPE_INDEX.md |
+| 006 | Foundation | knowledge | promotion-and-generalization | BOUNDED | TODO | PRODUCT-KNOWLEDGE.md |
+| 007 | Foundation | governance | canonical-change-integrity | SYSTEMIC | TODO | skills/governance/canonical-integrity/SKILL.md |
+| 008 | Foundation | validation | bidirectional-evidence-claim-validation | SYSTEMIC | TODO | docs/TOOLKIT_ARCHITECTURE.md |
+| 009 | Foundation | responsibility | multi-agent-responsibility-allocation | BOUNDED | TODO | docs/WEB_AI_SEAT_FOUNDATION.md |
+| 010 | Foundation | learning | cross-project-learning-feedback | SYSTEMIC | TODO | docs/KNOWLEDGE_UPSTREAM_BOUNDARY.md |
 
-**Status values (strict order):**  
-`TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`
+**Status values:** `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`.
 
 **Rules**
-- Never invent an XXX that is not first proposed via `phase-planner` and approved.
+- Never invent an XXX that is not first proposed and approved.
 - Never skip XXXs.
 - One active XXX at a time.
-- Every XXX must produce the Five Evidences.
-- Group rows by Field so progress per area is obvious at a glance.
-- Mobile / continuation agents: always pick the first non-ADVANCED row.
+- Every completed XXX must produce the Five Evidences.
+- Baseline freezes must trigger skill-coverage review.
+- Mobile / continuation agents pick the first non-ADVANCED row and read the current authority chain before acting.
 
 ---
 
 ## 5. Impact Classification
 
-| Impact    | Meaning                                                      | Example                          |
-|-----------|--------------------------------------------------------------|----------------------------------|
-| LOCAL     | Single file / internal, no consumer impact                   | Comment, pure refactor           |
-| BOUNDED   | One authority + limited consumers, contract recorded         | New endpoint, new UI screen      |
-| SYSTEMIC  | Touches Source-of-Truth, POLICY, registry, or many consumers | Auth model, new major field      |
+| Impact | Meaning | Example |
+|---|---|---|
+| LOCAL | Single file/internal with no consumer impact | comment, purely local refactor |
+| BOUNDED | One authority + limited consumers, contract recorded | skill extension, responsibility unit |
+| SYSTEMIC | Product Law, POLICY, registry/state, canonical structure, or many consumers | authority model, canonical integrity |
 
-Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-reporter`).
+Prefer LOCAL or BOUNDED. SYSTEMIC work requires explicit attention to user authority, safety, reconciliation, and evidence.
 
 ---
 
-## 6. Current Focus (update every session)
+## 6. Current Focus
 
-| Item                    | Value                                      |
-|-------------------------|--------------------------------------------|
-| **Current XXX**         | 002                                        |
-| **Status**              | ALIGNED                                    |
-| **Current Field**       | Foundation                                 |
-| **Next XXX**            | 003 (after this is advanced)               |
-| **Open Investigations** | none                                       |
-| **Last Checkpoint**     | agent-toolkit-fresh.zip                    |
-| **Active Findings**     | 2                                          |
+| Item | Value |
+|---|---|
+| **Current XXX** | 003 |
+| **Status** | RECORDED |
+| **Current Field** | Foundation |
+| **Next XXX** | 004 |
+| **Open Investigations** | none |
+| **Baseline focus** | self-protecting universal operating foundation |
+| **Knowledge transfer** | TeamAi canonical-structure lesson generalized upstream |
+| **Deployment guide** | `docs/USER_MANUAL_DEPLOYMENT.md` |
 
 ---
 
 ## 7. Dependency & Contract Pointers
 
-- Contracts          → `docs/contracts/`
-- Dependency map     → `docs/dependencies/`
-- Architecture map   → `docs/architecture-map.md`
-- Dictionary         → `.agent/dictionary/dictionary.json` + `docs/dictionary/DICTIONARY.md`
-- Full repo wiring   → `docs/STRUCTURE.md`
+- Product Law → `PRODUCT_LAW.md`
+- Execution policy → `POLICY.md`
+- Knowledge → `PRODUCT-KNOWLEDGE.md`
+- Responsibility / seats → `docs/WEB_AI_SEAT_FOUNDATION.md`
+- Architecture → `docs/TOOLKIT_ARCHITECTURE.md`
+- Change contract → `docs/CHANGE_CONTRACT.md`
+- Skill scope → `docs/SKILL_SCOPE_INDEX.md`
+- Full repo wiring → `docs/STRUCTURE.md`
+- User deployment → `docs/USER_MANUAL_DEPLOYMENT.md`
+- Upstream boundary → `docs/KNOWLEDGE_UPSTREAM_BOUNDARY.md`
 
 ---
 
 ## 8. How to Add a New XXX (Mandatory Process)
 
-1. Use **phase-planner** skill → propose Field + XXX + Target + Impact
-2. Wait for explicit user approval
-3. Plant (new Field) or Branch (existing Field) on this file:
-   - Add entry under the correct Field in §3
-   - Add row in the Execution Checklist (§4)
-   - Update Current Focus (§6)
-4. Only then create the finding and begin Observe
-5. Never start coding until the row exists and anti-pattern check is done
+1. Use `phase-planner` to propose Field + XXX + Target + Impact.
+2. Obtain explicit user approval for material direction.
+3. Reconcile `PRODUCT_LAW.md` when product meaning changes.
+4. Plant or branch the approved row here.
+5. Identify the smallest sufficient skill bundle and check whether the frozen baseline requires a new skill.
+6. Complete Observe + Anti-Pattern check before implementation.
+7. Execute through O-R-U-C-A-V-E-A and produce the Five Evidences.
+8. Distill validated/generalized lessons into `PRODUCT-KNOWLEDGE.md`.
+9. Endorse / Advance only after verification and continuity state are complete.
 
 ---
 
-**Related skills:** `phase-planner`, `safety-reporter`, `agent-orucavea`
+**Related skills:** `phase-planner`, `scale-adapter`, `canonical-integrity`, `safety-reporter`, `agent-orucavea`.
