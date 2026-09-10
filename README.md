@@ -5,78 +5,76 @@
 
 ## What This Is
 
-Reusable agent operating system for any future large project.  
-Provides universal seat equipment: reusable skills, workspace governance, continuity, knowledge discipline, and project/scale adaptation.
+Reusable operating system for AI-assisted projects. It provides reusable skills, workspace governance, continuity, knowledge discipline, project/field adaptation, and scale adaptation.
 
-## Seat Foundation
+ToolKit equips WebAi seats but does **not** own a consuming project's Product Law, domain rules, providers, implementation details, credentials, or authorization.
 
-ToolKit is the reusable operating foundation from which WebAi seats are equipped. It is not a TeamAi-specific implementation and not merely a bag of skills.
-
-Consuming projects retain authority over their own Product Law, domain rules, providers, implementation details, credentials, and authorization. ToolKit instructs and equips; it does not silently authorize or rewrite a consuming project.
-
-ToolKit grows in two dimensions:
-- **Technical:** reusable skills, adapters, tools, and project/field support.
-- **Operational:** stronger governance, continuity, evidence discipline, anti-pattern detection, responsibility allocation, and adaptation to project size and Agent count.
-
-The goal is **disciplined capability**, not capability growth alone.
-
-## Upstream Learning Boundary
+## Core Principle
 
 ```text
-ToolKit → consuming project / WebAi seat → execution + evidence
-        → validated generalized lesson → ToolKit
+USER VISION
+  ↓
+PRODUCT_LAW.md
+  ↓
+MASTERPLAN.md
+  ↓
+skills + PRODUCT-KNOWLEDGE
+  ↓
+O-R-U-C-A-V-E-A
+  ↓
+validation + evidence
+  ↓
+endorsement
+  ↓
+knowledge / skill evolution
 ```
 
-Only validated, reusable lessons move upstream. Project-specific knowledge remains with the consuming project. ToolKit knowledge never flows downstream automatically.
+The goal is **disciplined capability**: capability grows together with governance, evidence, continuity, and safe adaptation.
 
-## Hierarchy of Authority (Read in this order)
+## Universal vs Consumer Boundary
 
-1. **Source-of-Truth** (Product Law) — defined in [`POLICY.md`](./POLICY.md) §1  
-2. [`POLICY.md`](./POLICY.md) — Constitution  
-3. [`PRODUCT-KNOWLEDGE.md`](./PRODUCT-KNOWLEDGE.md) — Permanent brain (especially Anti-Patterns)  
-4. [`MASTERPLAN.md`](./MASTERPLAN.md) — Conceptual map + current XXX  
-5. [`AI_ASSISTANT_READ_ME.md`](./AI_ASSISTANT_READ_ME.md) — Agent OS (reading order + gates)  
-6. [`ENDORSEMENT.md`](./ENDORSEMENT.md) — What is already approved  
+Toolkit knowledge is promoted only after validation + generalization. Consumer-specific product law and implementation remain downstream.
+
+## Hierarchy of Authority
+
+1. **User / project owner intent**
+2. [`PRODUCT_LAW.md`](./PRODUCT_LAW.md)
+3. [`POLICY.md`](./POLICY.md)
+4. [`PRODUCT-KNOWLEDGE.md`](./PRODUCT-KNOWLEDGE.md)
+5. [`MASTERPLAN.md`](./MASTERPLAN.md) + endorsed contracts
+6. Current checkpoint + machine state
+7. Everything else
 
 ## Layer Separation
 
-- **Governance / Canonical Layer** → the 6 files above + `.agent/` + `docs/` + `skills/` + `scripts/`
-- **Project-Development Layer** → `src/` only (code). Nothing else belongs there.
-
-## Quick Start
-
-```bash
-cp -r agent-toolkit my-new-project
-cd my-new-project
-# 1. Define Source-of-Truth + fill the 6 canonical files
-# 2. python scripts/census.py --base . --write
-# 3. Start session log + first checkpoint
-```
+- **Governance / Canonical** → 7 root canonical files + `.agent/` + `docs/` + `skills/` + `scripts/` + `validation/` + `builds/`
+- **Project-Development** → consuming project's declared product-code layer only
 
 ## Start Here
 
-- Humans & first-time explorers → [`QUICKSTART.md`](./QUICKSTART.md)
+- Humans → [`QUICKSTART.md`](./QUICKSTART.md)
+- Product authority → [`PRODUCT_LAW.md`](./PRODUCT_LAW.md)
+- Architecture → [`docs/TOOLKIT_ARCHITECTURE.md`](./docs/TOOLKIT_ARCHITECTURE.md)
+- Seat / scaling → [`docs/WEB_AI_SEAT_FOUNDATION.md`](./docs/WEB_AI_SEAT_FOUNDATION.md)
 - Full wiring → [`docs/STRUCTURE.md`](./docs/STRUCTURE.md)
+- Manual deployment → [`docs/USER_MANUAL_DEPLOYMENT.md`](./docs/USER_MANUAL_DEPLOYMENT.md)
 
-## Full Repo Map
-
-See [`docs/STRUCTURE.md`](./docs/STRUCTURE.md) for complete wiring and descriptions of every folder.
-
-## Key Tools (no code yet)
+## Key Tools
 
 | Tool | Path | Purpose |
 |------|------|---------|
 | Census | `scripts/census.py` | Inventory + cleanliness |
-| Skills | `skills/*/SKILL.md` | Phase skills (incl. canonical-build) |
+| Canonical Integrity | `scripts/canonical-integrity.py` | Fail-closed structural guard |
+| Skills | `skills/*/SKILL.md` | Reusable execution procedures |
 | Knowledge Search | `scripts/knowledge-search.py` | Anti-pattern check |
 | New XXX | `scripts/new-xxx.py` | Scaffold next finding |
 
 ## Status
 
-- Current focus: Toolkit baseline (no product code yet)
-- Registry: `.agent/continuity/registry.json`
-- Skills: 20 available (including `canonical-build`)
+- Current focus: self-protecting universal foundation, XXX 003 RECORDED
+- Skills: living catalog, expanded when validated baselines justify new reusable procedures
+- Learning: TeamAi lesson generalized upstream without importing TeamAi product rules
 
 ## What NEVER goes in this README
 
-Findings • logs • code • TODOs • patch notes • product details
+Findings • logs • code • raw knowledge • patch notes • product-specific details
