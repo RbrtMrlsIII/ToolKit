@@ -1,0 +1,47 @@
+schema: 1
+
+project: Universal AGENT Toolkit
+
+frontier_lock:
+  current_xxx: 003-self-protecting-universal-foundation
+  status: VALIDATED_STATIC
+  next_xxx: 004-responsibility-unit-seat-model
+
+claims:
+  TOOLKIT-003:
+    state: VALIDATED_STATIC
+  UNIVERSAL-CONSUMER-BOUNDARY:
+    state: IMPLEMENTED
+  RESPONSIBILITY-UNIT:
+    state: DEFINED
+  SKILL-GROWTH:
+    state: DEFINED
+  CANONICAL-INTEGRITY:
+    state: IMPLEMENTED
+
+canonical_indexes:
+  - PRODUCT_LAW.md
+  - POLICY.md
+  - MASTERPLAN.md
+  - PRODUCT-KNOWLEDGE.md
+  - AI_ASSISTANT_READ_ME.md
+  - ENDORSEMENT.md
+  - docs/TOOLKIT_ARCHITECTURE.md
+  - docs/CHANGE_CONTRACT.md
+  - docs/WEB_AI_SEAT_FOUNDATION.md
+  - docs/SKILL_SCOPE_INDEX.md
+  - skills/SKILLS_INDEX.md
+  - docs/STRUCTURE.md
+
+historical_paths:
+  - docs/history/**
+  - docs/handover/**
+  - .agent/sessions/**
+
+rules:
+  historical_docs_are_immutable: true
+  active_indexes_must_agree: true
+  implementation_claim_requires_evidence: true
+  validation_requires_current_index: true
+  canonical_structure_preservation: fail_closed
+  unknown_governance_state: block
