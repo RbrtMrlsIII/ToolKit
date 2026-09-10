@@ -1,165 +1,185 @@
 # AI_ASSISTANT_READ_ME.md — Universal Operating System for AI Agents
 
-> **MANDATORY READ FOR EVERY AI INSTANCE.**  
-> You are a CONTINUATION agent, not a new agent. Trust files, not memory.  
-> Applies to all projects.
+> **MANDATORY READ FOR EVERY AI INSTANCE.** You are a CONTINUATION agent, not a new agent. Trust files, not memory. Applies to all projects.
 
 ---
 
-## 0. Highest Authority
+## 0. Highest Authority and User-First Chain
 
-1. **Source-of-Truth** (Product Law) — see POLICY.md §1
-2. POLICY.md (this constitution)
-3. PRODUCT-KNOWLEDGE.md (especially Anti-Patterns)
-4. MASTERPLAN.md + endorsed contracts
-5. Current checkpoint + registry
-6. Everything else
+1. **User / project owner intent**
+2. **`PRODUCT_LAW.md`** — canonical reconstruction of approved product meaning
+3. **`POLICY.md`** — governance constitution
+4. **`PRODUCT-KNOWLEDGE.md`** — endorsed permanent knowledge, Anti-Patterns first
+5. **`MASTERPLAN.md` + endorsed contracts** — ordered execution slices
+6. Current checkpoint + registry/state
+7. Everything else
 
-Never permanently contradict the Source-of-Truth.
+Universal execution chain:
 
----
+```text
+user command
+→ consult Agents
+→ user approval
+→ reconstruct PRODUCT_LAW.md
+→ MASTERPLAN.md checklist / slice
+→ skills + PRODUCT-KNOWLEDGE
+→ O-R-U-C-A-V-E-A
+→ action / implementation
+→ validation
+→ evidence
+→ complete log / handover
+→ endorsement
+→ PRODUCT-KNOWLEDGE growth
+```
 
-## 1. Layer Separation (Critical)
+An Agent may propose before approval. It may not promote its proposal to product truth silently.
+
+## 1. Layer Separation
 
 | Layer | Location | What belongs here | What does NOT belong here |
-|-------|----------|-------------------|---------------------------|
-| **Governance / Canonical** | Root 6 files + `.agent/` + `docs/` + `skills/` + `scripts/` | Continuity, knowledge, rules, findings, skills | Product business logic, UI components, domain code |
-| **Project-Development** | `src/` (or `app/`, `lib/`, `packages/`) | **Product code only** | Findings, knowledge, session logs, canonical rules, builds |
+|---|---|---|---|
+| Governance / Canonical | root canonical files + `.agent/` + `docs/` + `skills/` + `scripts/` | authority, continuity, knowledge, rules, skills, evidence | product business logic, UI components, domain code |
+| Project-Development | `src/` or project equivalent | product code and product tests | findings, knowledge, session logs, canonical rules |
 
-`src/` is the product code structure. Nothing else.
+## 2. Continuity Reading Order
 
----
+Before any action, read:
 
-## 2. Continuity Reading Order (Non-Negotiable)
+1. `PRODUCT_LAW.md`
+2. `POLICY.md`
+3. `PRODUCT-KNOWLEDGE.md` — Anti-Patterns first
+4. `.agent/continuity/registry.json` and `state.json`
+5. latest checkpoint / handover
+6. `MASTERPLAN.md` current XXX
+7. `ENDORSEMENT.md`
+8. relevant contracts, structure, and product source
 
-Before **any** action, read in this exact order:
+Skipping Anti-Patterns is a hard violation.
 
-1. `POLICY.md` — Constitution + Source-of-Truth + Layer Separation
-2. `PRODUCT-KNOWLEDGE.md` — **Anti-Patterns section first** (prevents repeat dead ends)
-3. `.agent/continuity/registry.json` — Machine truth
-4. `.agent/continuity/state.json` — Last good state
-5. Latest `checkpoint-XXX.md`
-6. `MASTERPLAN.md` — Your assigned XXX row
-7. `ENDORSEMENT.md` — What is already approved
-8. Relevant contracts in `docs/contracts/` and existing structure in `src/`
-
-Skipping PRODUCT-KNOWLEDGE Anti-Patterns = hard violation.
-
----
-
-## 3. Before Any Change (Editing, Debugging, Adding, Deduping, Fixing Discrepancies)
+## 3. Before Any Change
 
 You MUST:
 
-1. Complete the reading order above
-2. Observe existing authorities, consumers, and **current canonical structures**
-3. Run anti-pattern check against PRODUCT-KNOWLEDGE.md
-4. Only then Classify impact (LOCAL | BOUNDED | SYSTEMIC)
-5. Make the **smallest bounded change**
-
-Never start coding or restructuring until the above is done.
-
----
+1. observe current authority and canonical structure;
+2. check known anti-patterns;
+3. identify the current slice and responsibility;
+4. declare a change contract for meaningful changes;
+5. preserve unrelated canonical structure;
+6. load the smallest sufficient skill bundle;
+7. only then act.
 
 ## 4. Execution Discipline — O-R-U-C-A-V-E-A
 
-**Outer 8-Gate Loop**  
-Observe → Record → Understand → Classify → Align → Validate → Endorse → Advance
+Observe → Record → Understand → Classify → Align → Validate → Endorse → Advance.
 
-**Inner 9-Step Loop** (inside Align → Advance)  
-1. Identify authority  
-2. Identify consumers  
-3. Classify impact  
-4. Record contract / dependency impact  
-5. Make smallest bounded change  
-6. Validate source + all consumers  
-7. Distill to PRODUCT-KNOWLEDGE.md  
-8. Update machine state + docs  
-9. Checkpoint / handover + archive
+Inside Align → Advance:
 
----
+1. identify authority;
+2. identify consumers;
+3. classify impact;
+4. record dependency/contract impact;
+5. make the smallest bounded change;
+6. validate source + consumers + structure;
+7. distill reusable knowledge;
+8. update machine state + docs;
+9. checkpoint / handover / archive as required.
 
-## 5. Five Required Evidences
+## 5. Five Evidences
 
-Every completed XXX must leave all five:
+Every completed XXX must leave:
 
-1. Human findings → `docs/findings/XXX-….md` (transient)
-2. Machine state → `registry.json` + `state.json`
-3. Validation evidence → `validation/evidence/XXX-….md`
-4. Handover / checkpoint → `docs/handover/` + `.agent/continuity/checkpoint-XXX.md`
-5. Knowledge distillation → row in PRODUCT-KNOWLEDGE.md + Minimalism Log
+1. human finding;
+2. machine state;
+3. validation evidence;
+4. checkpoint + handover;
+5. knowledge distillation.
 
-Missing the 5th = incomplete even if tests pass.
+## 6. Baseline Freezes and Skill Growth
 
----
+A validated frozen baseline triggers skill coverage review.
 
-## 6. Minimalism Principle
+```text
+baseline freeze
+→ identify repeatable procedure
+→ reuse existing skill OR create/refine skill
+→ define scope + dependencies + verification
+→ endorse
+→ future slices consume smallest sufficient bundle
+```
 
-- `docs/findings/` = transient (max 10 files)
-- `PRODUCT-KNOWLEDGE.md` = permanent dense brain
-- After endorsement → distill → archive → later compress/delete only with proof
-- Goal: Active project = 6 canonical files + ≤ 10 findings + code in `src/`
+Skills are living infrastructure. More frozen baselines may create more skills, but never more authority.
 
----
+## 7. Canonical Structure Preservation
 
-## 7. File Update Protocol + Session Logging
+Canonical documents are protected knowledge structures.
 
-**Session log must be created at the START of every session**, not at the end.
+- Keep all unrelated canonical sections.
+- Do not treat a narrow request as permission to rewrite the whole document.
+- Detect removed headings, large deletion blocks, and unrelated structural drift.
+- Fail closed on unexplained canonical loss.
 
-When you change **any** file, update the full chain with timestamps (see POLICY.md §7):
+Use `skills/governance/canonical-integrity/SKILL.md` and `scripts/canonical-integrity.py`.
 
-Source → Session log → registry + state → checkpoint + handover → PRODUCT-KNOWLEDGE (if pattern) → dictionary (if entity) → builds (if buildable) → census → architecture map → finalize session log
+## 8. Instruction vs Authorization
 
-Incomplete session log or missing updates = census FAIL.
+```text
+Skill              → HOW
+Policy / workspace → WHETHER
+Permission          → WHETHER THE Agent MAY ACT
+PRODUCT_LAW         → WHAT IS TRUE
+MASTERPLAN          → WHAT APPROVED SLICE IS NEXT
+Evidence            → WHAT WAS PROVEN
+```
 
----
+Skills never grant authorization.
 
-## 8. Canonical Build Locations
+## 9. Knowledge State Classes
 
-Only allowed places for builds:
+Use explicit state distinctions:
 
-- `builds/XXX-phase-target/` and `builds/latest/`
-- `.agent/builds/`
+`CURRENT | DERIVED | HISTORICAL | CANDIDATE | ENDORSED`
 
-**Never** put builds inside `src/` or `docs/`.  
-Use skill: `skills/canonical-build/SKILL.md`
+Historical material is preserved, not silently cleaned up. Candidate knowledge is not authoritative until validated and endorsed.
 
----
+## 10. Upstream / Downstream Boundary
 
-## 9. Machine + Human Readable Pairs
+```text
+consumer finding
+→ evidence + validation
+→ generalization
+→ Toolkit candidate
+→ endorsement
+→ universal knowledge / skill
+```
 
-| Machine (always tracked) | Human (generated / readable) |
-|--------------------------|------------------------------|
-| `.agent/continuity/registry.json` | `MASTERPLAN.md`, checkpoints |
-| `.agent/continuity/state.json` | `docs/handover/` |
-| `.agent/sessions/*.json` | `docs/sessions/*.md` |
-| `.agent/dictionary/dictionary.json` | `docs/dictionary/DICTIONARY.md` |
-| `.agent/builds/builds.json` | `builds/` + build logs |
-| `docs/census/*.json` | `docs/census/*-report.md` + dashboard |
+Consumer-specific law, architecture, provider choices, credentials, and domain details stay downstream. Toolkit changes never silently overwrite an existing project.
 
-Always keep both sides in sync.
+## 11. Human Deployment
 
----
+Human-only deployment guidance lives in the single canonical file:
+`docs/USER_MANUAL_DEPLOYMENT.md`.
 
-## 10. Hard Constraints (Mobile & Continuity)
+Agents may prepare and verify. They must not invent secrets, URLs, account authority, billing settings, or production state.
 
-- Trust files, never memory
-- Never create `patch1.md`, `final.md`, `fix.md`, `temp.md` — only `XXX-phase-target`
-- Never edit README.md beyond wiring
-- Never add unvalidated guesses to PRODUCT-KNOWLEDGE.md
-- When uncertain → create investigation file and stop
-- Before deleting any finding → prove distillation (Minimalism Log + archive + endorsement)
+## 12. Hard Constraints
 
----
+- Trust files, not memory.
+- Never create forbidden patch/final/fix/temp/backup/old/new/v1/copy/test2/dd names.
+- Never put product details or raw findings into README.
+- Never add unvalidated guesses to PRODUCT-KNOWLEDGE.
+- Never silently delete historical evidence.
+- Never bypass Product Law, policy, permissions, or required approval.
+- When uncertain, stop and create an investigation.
 
-## 11. Quick Load Skills
+## 13. Quick Load Skills
 
-| Moment | Load this skill |
-|--------|-----------------|
+| Moment | Load |
+|---|---|
 | Session start | `session-logger` |
 | Before Classify | `anti-pattern-checker` |
-| Every file change | `file-update-protocol` |
-| Before / during build | `canonical-build` |
+| Canonical change | `file-update-protocol` + `canonical-integrity` |
+| Before build | `canonical-build` |
 | At Advance | `knowledge-distiller` + `minimalism-enforcer` + `checkpoint-creator` |
+| Handover | `target-project-handover` |
 
-Full index: `skills/SKILLS_INDEX.md`
+Full index: `skills/SKILLS_INDEX.md`.
