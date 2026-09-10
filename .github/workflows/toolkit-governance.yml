@@ -1,0 +1,64 @@
+name: toolkit-governance
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  canonical-integrity:
+    name: canonical-integrity
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify canonical structure
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          python3 scripts/canonical-integrity.py \
+            --base "$BASE_SHA" \
+            --head "$HEAD_SHA"
+
+  baseline-governance:
+    name: baseline-governance
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Python syntax check
+        run: python3 -m py_compile scripts/canonical-integrity.py scripts/census.py scripts/knowledge-search.py
+
+      - name: Verify required governance documents
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          required = [
+              Path("PRODUCT_LAW.md"),
+              Path("POLICY.md"),
+              Path("MASTERPLAN.md"),
+              Path("PRODUCT-KNOWLEDGE.md"),
+              Path("AI_ASSISTANT_READ_ME.md"),
+              Path("ENDORSEMENT.md"),
+              Path("docs/TOOLKIT_ARCHITECTURE.md"),
+              Path("docs/CHANGE_CONTRACT.md"),
+              Path("docs/WEB_AI_SEAT_FOUNDATION.md"),
+              Path("docs/USER_MANUAL_DEPLOYMENT.md"),
+              Path("skills/governance/canonical-integrity/SKILL.md"),
+          ]
+          missing = [str(p) for p in required if not p.is_file()]
+          if missing:
+              raise SystemExit("Missing required governance artifacts:\n- " + "\n- ".join(missing))
+          print(f"Governance baseline PASS: {len(required)} artifacts present")
+          PY
