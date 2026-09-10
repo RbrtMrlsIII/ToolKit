@@ -3,17 +3,21 @@ schema: 1
 project: Universal AGENT Toolkit
 
 frontier_lock:
-  current_xxx: 003-self-protecting-universal-foundation
-  status: VALIDATED_STATIC
-  next_xxx: 004-responsibility-unit-seat-model
+  current_xxx: 004-responsibility-unit-seat-model
+  status: OBSERVED
+  next_xxx: 005-dynamic-skill-resolution-and-scale
 
 claims:
   TOOLKIT-003:
-    state: VALIDATED_STATIC
+    state: ADVANCED
+  TOOLKIT-004:
+    state: OBSERVED
   UNIVERSAL-CONSUMER-BOUNDARY:
     state: IMPLEMENTED
   RESPONSIBILITY-UNIT:
-    state: DEFINED
+    state: IMPLEMENTED
+  SEAT-MODEL:
+    state: IMPLEMENTED
   SKILL-GROWTH:
     state: DEFINED
   CANONICAL-INTEGRITY:
@@ -29,6 +33,7 @@ canonical_indexes:
   - docs/TOOLKIT_ARCHITECTURE.md
   - docs/CHANGE_CONTRACT.md
   - docs/WEB_AI_SEAT_FOUNDATION.md
+  - docs/RESPONSIBILITY_UNIT_SEAT_MODEL.md
   - docs/SKILL_SCOPE_INDEX.md
   - skills/SKILLS_INDEX.md
   - docs/STRUCTURE.md

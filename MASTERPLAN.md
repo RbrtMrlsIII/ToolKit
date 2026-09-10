@@ -39,7 +39,7 @@ builds/   (outputs only)
 ## 3. Field-Based Conceptual Map
 
 > Keep every phase grouped under its field.  
-> This is what makes progress and stopping points obvious.
+> This is what makes progress and stopping points obvious at a glance.
 
 ### Field 0 — Foundation / Toolkit
 ```
@@ -59,7 +59,19 @@ builds/   (outputs only)
   Authority : scripts/ + .agent/continuity/
   Consumers : All agents + humans opening any project
   Impact    : BOUNDED
-  Status    : IN PROGRESS
+  Status    : ADVANCED
+
+003-self-protecting-universal-foundation
+  Authority : PRODUCT_LAW.md + POLICY.md + governance contracts
+  Consumers : Toolkit governance + WebAi seats + consuming projects
+  Impact    : SYSTEMIC
+  Status    : ADVANCED
+
+004-responsibility-unit-seat-model
+  Authority : PRODUCT_LAW.md + POLICY.md + approved 004 contract
+  Consumers : WebAi seats + future agents/projects
+  Impact    : SYSTEMIC
+  Status    : OBSERVED
 ```
 
 ### Field 1 — Backend
@@ -99,11 +111,13 @@ builds/   (outputs only)
 
 ## 4. Execution Checklist (THE only source for XXX numbers)
 
-| XXX | Field              | Phase     | Target              | Impact    | Status   | Evidence                     |
-|-----|--------------------|-----------|---------------------|-----------|----------|------------------------------|
-| 000 | Foundation         | scaffold  | toolkit             | SYSTEMIC  | ADVANCED | 000-scaffold-toolkit.md      |
-| 001 | Foundation         | foundation| project-scaffold    | BOUNDED   | ADVANCED | 001-foundation-project-scaffold.md |
-| 002 | Foundation         | foundation| project-status      | BOUNDED   | ALIGNED  | 002-foundation-project-status.md   |
+| XXX | Field              | Phase     | Target                         | Impact    | Status   | Evidence |
+|-----|--------------------|-----------|--------------------------------|-----------|----------|----------|
+| 000 | Foundation         | scaffold  | toolkit                        | SYSTEMIC  | ADVANCED | 000-scaffold-toolkit.md |
+| 001 | Foundation         | foundation| project-scaffold               | BOUNDED   | ADVANCED | 001-foundation-project-scaffold.md |
+| 002 | Foundation         | foundation| project-status                 | BOUNDED   | ADVANCED | 002-foundation-project-status.md |
+| 003 | Foundation         | governance| self-protecting-universal-foundation | SYSTEMIC | ADVANCED | 003-self-protecting-universal-foundation.md |
+| 004 | Foundation         | foundation| responsibility-unit-seat-model | SYSTEMIC  | OBSERVED | 004-responsibility-unit-seat-model.md |
 
 **Status values (strict order):**  
 `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`
@@ -134,13 +148,13 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 | Item                    | Value                                      |
 |-------------------------|--------------------------------------------|
-| **Current XXX**         | 002                                        |
-| **Status**              | ALIGNED                                    |
+| **Current XXX**         | 004                                        |
+| **Status**              | OBSERVED                                   |
 | **Current Field**       | Foundation                                 |
-| **Next XXX**            | 003 (after this is advanced)               |
+| **Next XXX**            | 005 (after 004 is advanced)               |
 | **Open Investigations** | none                                       |
-| **Last Checkpoint**     | agent-toolkit-fresh.zip                    |
-| **Active Findings**     | 2                                          |
+| **Last Checkpoint**     | 003 merge reconciliation                   |
+| **Active Findings**     | 1                                          |
 
 ---
 
