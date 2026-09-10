@@ -6,7 +6,28 @@
 ## What This Is
 
 Reusable agent operating system for any future large project.  
-Enforces continuity, anti-repeat knowledge, minimalism, and O-R-U-C-A-V-E-A discipline.
+Provides universal seat equipment: reusable skills, workspace governance, continuity, knowledge discipline, and project/scale adaptation.
+
+## Seat Foundation
+
+ToolKit is the reusable operating foundation from which WebAi seats are equipped. It is not a TeamAi-specific implementation and not merely a bag of skills.
+
+Consuming projects retain authority over their own Product Law, domain rules, providers, implementation details, credentials, and authorization. ToolKit instructs and equips; it does not silently authorize or rewrite a consuming project.
+
+ToolKit grows in two dimensions:
+- **Technical:** reusable skills, adapters, tools, and project/field support.
+- **Operational:** stronger governance, continuity, evidence discipline, anti-pattern detection, responsibility allocation, and adaptation to project size and Agent count.
+
+The goal is **disciplined capability**, not capability growth alone.
+
+## Upstream Learning Boundary
+
+```text
+ToolKit → consuming project / WebAi seat → execution + evidence
+        → validated generalized lesson → ToolKit
+```
+
+Only validated, reusable lessons move upstream. Project-specific knowledge remains with the consuming project. ToolKit knowledge never flows downstream automatically.
 
 ## Hierarchy of Authority (Read in this order)
 
