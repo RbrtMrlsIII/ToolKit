@@ -1,6 +1,16 @@
 # Skill Scope Index — Universal AGENT Toolkit
 
-**Purpose:** deterministic fast-switching across project types and fields. This index classifies every currently indexed Toolkit skill; it does not redefine skill behavior.
+**Purpose:** deterministic fast-switching across project types, fields, phases, tasks, runtimes, tools, and scale. This index classifies skills; each skill's `SKILL.md` remains its behavioral authority.
+
+## Scope classes
+
+`UNIVERSAL` = reusable across projects and fields.
+
+`ADAPTABLE` = universal mechanism with project/field/runtime parameters.
+
+`CONSUMER-SPECIFIC` = belongs in the consuming project, not Toolkit core.
+
+A skill does not grant authorization.
 
 ## Project-type codes
 
@@ -8,50 +18,69 @@
 
 ## Skill field/type matrix
 
-| Skill | Primary field | Project types | Fast-switch role |
-|---|---|---|---|
-| scale-adapter | Foundation | ALL | choose project scale and constraints |
-| roots-definer | Foundation | ALL | establish/validate root architecture before planning |
-| phase-planner | Planning | ALL | plant/branch the next approved XXX |
-| safety-reporter | Safety | ALL | gate high-impact/destructive work |
-| observe | Core execution | ALL | inspect current reality |
-| record | Core execution | ALL | preserve evidence/findings |
-| understand | Core execution | ALL | establish meaning/relationships |
-| classify | Core execution | ALL | classify status/impact |
-| align | Core execution | ALL | align authority and implementation |
-| validate | Verification | ALL | execute verification |
-| endorse | Governance | ALL | close approval gate |
-| advance | Governance | ALL | advance checkpoint and continuity |
-| anti-pattern-checker | Knowledge | ALL | prevent known failure repetition |
-| knowledge-distiller | Knowledge | ALL | generalize validated lessons upstream |
-| minimalism-enforcer | Knowledge | ALL | prevent unnecessary growth/noise |
-| checkpoint-creator | Continuity | ALL | preserve durable stopping point |
-| census-runner | Governance/Structure | ALL | inventory/cleanliness/enforcement |
-| reconciliation-manager | Reconciliation | ALL | resolve state/registry/document drift |
-| investigation-manager | Investigation | ALL | contain uncertainty/discrepancy |
-| contract-manager | Contracts | ALL | maintain source-of-truth contracts |
-| session-logger | Continuity | ALL | start/close durable session evidence |
-| file-update-protocol | Structure/Continuity | ALL | keep related-document chain synchronized |
-| canonical-build | Engineering | WEB,MOBILE,BACKEND,3D,GAME,GENERIC | construct canonical deliverables |
-| dictionary-manager | Structure/Knowledge | ALL | maintain machine/human entity dictionary |
-| agent-orucavea | High-level execution | ALL | condensed O-R-U-C-A-V-E-A guidance |
-| agent-knowledge | High-level knowledge | ALL | condensed knowledge guidance |
-| agent-continuity | High-level continuity | ALL | condensed continuity guidance |
-| agent-census | High-level governance | ALL | condensed census guidance |
-| agent-structure | High-level structure | ALL | condensed structure guidance |
+| Skill | Primary field | Scope | Project types | Fast-switch role |
+|---|---|---|---|---|
+| scale-adapter | Foundation | UNIVERSAL | ALL | choose project scale and constraints |
+| roots-definer | Foundation | UNIVERSAL | ALL | establish/validate root architecture before planning |
+| phase-planner | Planning | UNIVERSAL | ALL | plant/branch the next approved XXX |
+| safety-reporter | Safety | UNIVERSAL | ALL | gate high-impact/destructive work |
+| observe | Core execution | UNIVERSAL | ALL | inspect current reality |
+| record | Core execution | UNIVERSAL | ALL | preserve evidence/findings |
+| understand | Core execution | UNIVERSAL | ALL | establish meaning/relationships |
+| classify | Core execution | UNIVERSAL | ALL | classify status/impact |
+| align | Core execution | UNIVERSAL | ALL | align authority and implementation |
+| validate | Verification | UNIVERSAL | ALL | execute verification |
+| endorse | Governance | UNIVERSAL | ALL | close approval gate |
+| advance | Governance | UNIVERSAL | ALL | advance checkpoint and continuity |
+| anti-pattern-checker | Knowledge | UNIVERSAL | ALL | prevent known failure repetition |
+| knowledge-distiller | Knowledge | UNIVERSAL | ALL | generalize validated lessons upstream |
+| minimalism-enforcer | Knowledge | UNIVERSAL | ALL | prevent unnecessary growth/noise |
+| checkpoint-creator | Continuity | UNIVERSAL | ALL | preserve durable stopping point |
+| census-runner | Governance/Structure | UNIVERSAL | ALL | inventory/cleanliness/enforcement |
+| reconciliation-manager | Reconciliation | UNIVERSAL | ALL | resolve state/registry/document drift |
+| investigation-manager | Investigation | UNIVERSAL | ALL | contain uncertainty/discrepancy |
+| contract-manager | Contracts | UNIVERSAL | ALL | maintain source-of-truth contracts |
+| session-logger | Continuity | UNIVERSAL | ALL | start/close durable session evidence |
+| file-update-protocol | Structure/Continuity | UNIVERSAL | ALL | keep related-document chain synchronized |
+| canonical-integrity | Governance/Validation | UNIVERSAL | ALL | protect canonical sections from unexplained loss |
+| canonical-build | Engineering | UNIVERSAL | ALL | construct canonical deliverables |
+| dictionary-manager | Structure/Knowledge | UNIVERSAL | ALL | maintain machine/human entity dictionary |
+| target-project-handover | Continuity/Handover | UNIVERSAL | ALL | preserve downstream handover boundary |
+| agent-orucavea | High-level execution | UNIVERSAL | ALL | condensed O-R-U-C-A-V-E-A guidance |
+| agent-knowledge | High-level knowledge | UNIVERSAL | ALL | condensed knowledge guidance |
+| agent-continuity | High-level continuity | UNIVERSAL | ALL | condensed continuity guidance |
+| agent-census | High-level governance | UNIVERSAL | ALL | condensed census guidance |
+| agent-structure | High-level structure | UNIVERSAL | ALL | condensed structure guidance |
 
-## Field-specific extension rule
+## Dynamic extension rule
 
-The universal skills above are cross-project. Field-specific skills are added as the Toolkit grows and must declare:
+Field-specific or provider-specific skills may be added only when their scope is explicit and the dependency boundary is recorded. Every skill extension declares:
 
+- scope class;
 - field;
 - supported project types;
 - task/domain scope;
+- current phase/XXX relevance;
 - dependencies/prerequisites;
-- whether the skill is instructional, validation, governance, or integration-facing;
-- required provider/service/runtime constraints when applicable.
+- instructional / validation / governance / integration-facing role;
+- provider/service/runtime constraints when applicable;
+- authorization boundary;
+- verification method.
 
-Current consuming-project examples include frontend, backend, provider-compliance, spatial/domain, and integration skills. These remain project-specific until generalized and promoted here.
+## Baseline-driven skill growth
+
+Every validated baseline freeze triggers a skill-coverage review. The question is not “how many skills should exist?” but “what repeatable execution is now stable enough to deserve reusable equipment?”
+
+```text
+baseline freeze
+→ repeatable procedure
+→ reuse current skill OR candidate skill/extension/validator
+→ define scope/dependencies/verification
+→ validate + endorse
+→ add to index
+```
+
+Skills are living infrastructure. Their count may increase as execution baselines accumulate. Skill proliferation without reusable evidence is a governance smell.
 
 ## Resolution rule
 
@@ -64,11 +93,12 @@ project type
   + tools/plugins
   + project guidance
   + permissions/policy
+  + current skill coverage
   = effective skill set
 ```
 
-Load the smallest sufficient bundle. A skill never grants authorization.
+**Load the smallest sufficient bundle.** A skill never grants authorization.
 
 ## Upstream-only knowledge rule
 
-Project findings are not copied into Toolkit verbatim. Only validated and generalized lessons become Toolkit skills/patterns/anti-patterns. Toolkit changes do not automatically flow back into a consuming project.
+Project findings are not copied into Toolkit verbatim. Only validated and generalized lessons become Toolkit skills, patterns, anti-patterns, validators, or safety rules. Toolkit changes do not automatically flow back into a consuming project.
