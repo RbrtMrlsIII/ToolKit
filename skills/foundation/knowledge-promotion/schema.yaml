@@ -1,0 +1,23 @@
+schema: toolkit.knowledge-promotion.v1
+classification:
+  - UNIVERSAL
+  - ADAPTABLE
+  - CONSUMER-SPECIFIC
+  - EPHEMERAL
+lifecycle:
+  - OBSERVED
+  - RECORDED
+  - VALIDATED
+  - GENERALIZATION_REVIEW
+  - CANDIDATE
+  - ENDORSED
+  - REJECTED
+required:
+  - source_project
+  - source_finding
+  - source_evidence
+  - classification
+  - proposed_claim
+  - validation
+  - endorsement
+  - promotion_target

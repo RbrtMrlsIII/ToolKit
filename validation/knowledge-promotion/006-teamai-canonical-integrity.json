@@ -1,0 +1,13 @@
+{
+  "schema": "toolkit.knowledge-promotion.v1",
+  "source_project": "TeamAi",
+  "source_finding": "consumer-project evidence: canonical structure loss during a narrow Masterplan update",
+  "source_evidence": "TeamAi validation evidence for canonical-integrity failure",
+  "classification": "UNIVERSAL",
+  "proposed_claim": "Canonical changes must preserve unrelated knowledge and fail closed on unexplained structural loss; legitimate future migrations must declare their successor or retirement reason.",
+  "consumer_dependency": "NONE",
+  "validation": "PASS",
+  "endorsement": "PENDING",
+  "promotion_target": "PRODUCT-KNOWLEDGE.md §1",
+  "notes": "TeamAi-specific product rules, provider/runtime details, file names, and implementation details remain downstream."
+}

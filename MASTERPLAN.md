@@ -77,6 +77,12 @@ builds/   (outputs only)
   Authority : PRODUCT_LAW.md + POLICY.md + approved 005 contract
   Consumers : WebAi seats + future agents/projects
   Impact    : SYSTEMIC
+  Status    : ADVANCED / FROZEN
+
+006-knowledge-promotion-and-generalization
+  Authority : PRODUCT_LAW.md + POLICY.md + approved 006 contract
+  Consumers : Toolkit knowledge system + future consumer projects
+  Impact    : SYSTEMIC
   Status    : OBSERVED / ACTIVE
 ```
 
@@ -124,7 +130,8 @@ builds/   (outputs only)
 | 002 | Foundation         | foundation| project-status                 | BOUNDED   | ADVANCED | 002-foundation-project-status.md |
 | 003 | Foundation         | governance| self-protecting-universal-foundation | SYSTEMIC | ADVANCED | 003-self-protecting-universal-foundation.md |
 | 004 | Foundation         | foundation| responsibility-unit-seat-model | SYSTEMIC  | ADVANCED | 004-responsibility-unit-seat-model.md |
-| 005 | Foundation         | foundation| dynamic-skill-resolution-scale-adaptation | SYSTEMIC | OBSERVED | 005-dynamic-skill-resolution-scale-adaptation.md |
+| 005 | Foundation         | foundation| dynamic-skill-resolution-scale-adaptation | SYSTEMIC | ADVANCED | 005-dynamic-skill-resolution-scale-adaptation.md |
+| 006 | Foundation         | knowledge | knowledge-promotion-and-generalization | SYSTEMIC | OBSERVED | 006-knowledge-promotion-and-generalization.md |
 
 **Status values (strict order):**  
 `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`
@@ -155,12 +162,12 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 | Item                    | Value                                      |
 |-------------------------|--------------------------------------------|
-| **Current XXX**         | 005                                        |
+| **Current XXX**         | 006                                        |
 | **Status**              | OBSERVED                                   |
 | **Current Field**       | Foundation                                 |
-| **Next XXX**            | 006 (after 005 is advanced)                |
+| **Next XXX**            | 007 (after 006 is advanced)                |
 | **Open Investigations** | none                                       |
-| **Last Checkpoint**     | 004 frozen baseline                        |
+| **Last Checkpoint**     | 005 frozen baseline                        |
 | **Active Findings**     | 1                                          |
 
 ---
@@ -188,4 +195,4 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 ---
 
-**Related skills:** `phase-planner`, `safety-reporter`, `agent-orucavea`
+**Related skills:** `phase-planner`, `safety-reporter`, `agent-orucavea`, `knowledge-distiller`, `knowledge-promotion`
