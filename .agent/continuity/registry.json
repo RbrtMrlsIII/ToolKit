@@ -1,10 +1,8 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-11T08:00:00+08:00",
-  "current_xxx": "005-dynamic-skill-resolution-scale-adaptation",
+  "last_updated": "2026-09-11T09:15:00+08:00",
+  "current_xxx": "007-canonical-evolution-integrity",
   "todo": [
-    "006-knowledge-promotion-and-generalization",
-    "007-canonical-change-integrity",
     "008-bidirectional-evidence-claim-validation",
     "009-multi-agent-responsibility-allocation",
     "010-cross-project-learning-feedback"
@@ -14,12 +12,15 @@
     "001-foundation-project-scaffold",
     "002-foundation-project-status",
     "003-self-protecting-universal-foundation",
-    "004-responsibility-unit-seat-model"
+    "004-responsibility-unit-seat-model",
+    "005-dynamic-skill-resolution-scale-adaptation",
+    "006-knowledge-promotion-and-generalization"
   ],
   "knowledge_index": [
     "PRODUCT-KNOWLEDGE.md §1–§4",
-    "docs/history/TEAMAI_CANONICAL_STRUCTURE_FAILURE_2026-09-10.md"
+    "docs/history/TEAMAI_CANONICAL_STRUCTURE_FAILURE_2026-09-10.md",
+    "docs/knowledge-candidates/006-teamai-canonical-integrity.md"
   ],
-  "status": "005 validated; endorsement pending",
+  "status": "006 frozen; 007 observed",
   "project_name": "Universal AGENT Toolkit"
 }
