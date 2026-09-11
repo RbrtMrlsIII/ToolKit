@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "last_updated": "2026-09-11T08:00:00+08:00",
-  "last_good_state": "004-responsibility-unit-seat-model",
+  "last_updated": "2026-09-11T09:15:00+08:00",
+  "last_good_state": "006-knowledge-promotion-and-generalization",
   "active_findings": 1,
-  "status": "005 validated; endorsement pending",
-  "current_xxx": "005-dynamic-skill-resolution-scale-adaptation",
-  "ci_status": "success",
+  "status": "007 observed; CI pending; endorsement pending",
+  "current_xxx": "007-canonical-evolution-integrity",
+  "ci_status": "pending",
   "endorsement_status": "pending"
 }

@@ -83,6 +83,12 @@ builds/   (outputs only)
   Authority : PRODUCT_LAW.md + POLICY.md + approved 006 contract
   Consumers : Toolkit knowledge system + future consumer projects
   Impact    : SYSTEMIC
+  Status    : ADVANCED / FROZEN
+
+007-canonical-evolution-integrity
+  Authority : PRODUCT_LAW.md + POLICY.md + approved 007 contract
+  Consumers : Toolkit canonical governance + future agents/projects
+  Impact    : SYSTEMIC
   Status    : OBSERVED / ACTIVE
 ```
 
@@ -131,7 +137,8 @@ builds/   (outputs only)
 | 003 | Foundation         | governance| self-protecting-universal-foundation | SYSTEMIC | ADVANCED | 003-self-protecting-universal-foundation.md |
 | 004 | Foundation         | foundation| responsibility-unit-seat-model | SYSTEMIC  | ADVANCED | 004-responsibility-unit-seat-model.md |
 | 005 | Foundation         | foundation| dynamic-skill-resolution-scale-adaptation | SYSTEMIC | ADVANCED | 005-dynamic-skill-resolution-scale-adaptation.md |
-| 006 | Foundation         | knowledge | knowledge-promotion-and-generalization | SYSTEMIC | OBSERVED | 006-knowledge-promotion-and-generalization.md |
+| 006 | Foundation         | knowledge | knowledge-promotion-and-generalization | SYSTEMIC | ADVANCED | 006-knowledge-promotion-and-generalization.md |
+| 007 | Foundation         | governance | canonical-evolution-integrity | SYSTEMIC | OBSERVED | 007-canonical-evolution-integrity.md |
 
 **Status values (strict order):**  
 `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`
@@ -151,7 +158,7 @@ builds/   (outputs only)
 | Impact    | Meaning                                                      | Example                          |
 |-----------|--------------------------------------------------------------|----------------------------------|
 | LOCAL     | Single file / internal, no consumer impact                   | Comment, pure refactor           |
-| BOUNDED   | One authority + limited consumers, contract recorded         | New endpoint, new UI screen      |
+| BOUNDED   | One authority + limited consumers, contract recorded         | New endpoint, new UI screen     |
 | SYSTEMIC  | Touches Source-of-Truth, POLICY, registry, or many consumers | Auth model, new major field      |
 
 Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-reporter`).
@@ -162,12 +169,12 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 | Item                    | Value                                      |
 |-------------------------|--------------------------------------------|
-| **Current XXX**         | 006                                        |
+| **Current XXX**         | 007                                        |
 | **Status**              | OBSERVED                                   |
 | **Current Field**       | Foundation                                 |
-| **Next XXX**            | 007 (after 006 is advanced)                |
+| **Next XXX**            | 008 (after 007 is advanced)                |
 | **Open Investigations** | none                                       |
-| **Last Checkpoint**     | 005 frozen baseline                        |
+| **Last Checkpoint**     | 006 frozen baseline                        |
 | **Active Findings**     | 1                                          |
 
 ---
@@ -195,4 +202,4 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 ---
 
-**Related skills:** `phase-planner`, `safety-reporter`, `agent-orucavea`, `knowledge-distiller`, `knowledge-promotion`
+**Related skills:** `phase-planner`, `safety-reporter`, `agent-orucavea`, `knowledge-distiller`, `knowledge-promotion`, `canonical-evolution-integrity`

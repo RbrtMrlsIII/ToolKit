@@ -1,0 +1,14 @@
+{
+  "schema": "toolkit.canonical-evolution.v1",
+  "changes": [
+    {
+      "path": "<canonical path>",
+      "mode": "MIGRATE | RETIRE",
+      "removed_headings": ["<exact heading>"],
+      "authority": "<Product Law / approved contract reference>",
+      "scope": "<authorized semantic scope>",
+      "evidence": "<validation evidence path>",
+      "successor": "<target path/section>"
+    }
+  ]
+}
