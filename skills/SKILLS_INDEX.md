@@ -15,7 +15,7 @@
 observe → record → understand → classify → align → validate → endorse → advance
 
 ## Knowledge & Minimalism
-anti-pattern-checker, knowledge-distiller, **knowledge-promotion**, minimalism-enforcer, checkpoint-creator
+anti-pattern-checker, knowledge-distiller, **knowledge-promotion**, **canonical-evolution-integrity**, minimalism-enforcer, checkpoint-creator
 
 ## Governance
 census-runner, reconciliation-manager, investigation-manager, contract-manager
@@ -48,7 +48,7 @@ See `docs/SKILL_SCOPE_INDEX.md` for the field + project-type classification of e
 8. `record` → `understand` → `classify`
 9. `align` (+ `file-update-protocol`)
 10. `validate` → `census-runner`
-11. `endorse` → `advance` → `knowledge-distiller` → `knowledge-promotion` → `minimalism-enforcer`
+11. `endorse` → `advance` → `knowledge-distiller` → `knowledge-promotion` → `canonical-evolution-integrity` → `minimalism-enforcer`
 12. `target-project-handover` + `checkpoint-creator`
 
 ## Knowledge direction
