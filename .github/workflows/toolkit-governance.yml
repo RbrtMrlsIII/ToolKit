@@ -38,7 +38,7 @@ jobs:
           fetch-depth: 0
 
       - name: Python syntax check
-        run: python3 -m py_compile scripts/canonical-integrity.py scripts/census.py scripts/knowledge-search.py
+        run: python3 -m py_compile scripts/canonical-integrity.py scripts/census.py scripts/knowledge-search.py scripts/knowledge-promotion-validator.py
 
       - name: Verify required governance documents
         run: |
@@ -56,9 +56,20 @@ jobs:
               Path("docs/WEB_AI_SEAT_FOUNDATION.md"),
               Path("docs/USER_MANUAL_DEPLOYMENT.md"),
               Path("skills/governance/canonical-integrity/SKILL.md"),
+              Path("skills/foundation/knowledge-promotion/SKILL.md"),
           ]
           missing = [str(p) for p in required if not p.is_file()]
           if missing:
               raise SystemExit("Missing required governance artifacts:\n- " + "\n- ".join(missing))
           print(f"Governance baseline PASS: {len(required)} artifacts present")
           PY
+
+  knowledge-promotion:
+    name: knowledge-promotion
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run promotion boundary tests
+        run: python3 tests/test_knowledge_promotion.py
