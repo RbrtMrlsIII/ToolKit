@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Verify canonical structure
+      - name: Verify canonical structure and authorized evolution
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
@@ -38,7 +38,7 @@ jobs:
           fetch-depth: 0
 
       - name: Python syntax check
-        run: python3 -m py_compile scripts/canonical-integrity.py scripts/census.py scripts/knowledge-search.py scripts/knowledge-promotion-validator.py
+        run: python3 -m py_compile scripts/canonical-integrity.py scripts/canonical-evolution-validator.py scripts/census.py scripts/knowledge-search.py scripts/knowledge-promotion-validator.py
 
       - name: Verify required governance documents
         run: |
@@ -56,6 +56,7 @@ jobs:
               Path("docs/WEB_AI_SEAT_FOUNDATION.md"),
               Path("docs/USER_MANUAL_DEPLOYMENT.md"),
               Path("skills/governance/canonical-integrity/SKILL.md"),
+              Path("skills/governance/canonical-evolution-integrity/SKILL.md"),
               Path("skills/foundation/knowledge-promotion/SKILL.md"),
           ]
           missing = [str(p) for p in required if not p.is_file()]
@@ -73,3 +74,13 @@ jobs:
 
       - name: Run promotion boundary tests
         run: python3 tests/test_knowledge_promotion.py
+
+  canonical-evolution:
+    name: canonical-evolution
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run canonical evolution tests
+        run: python3 tests/test_canonical_evolution.py
