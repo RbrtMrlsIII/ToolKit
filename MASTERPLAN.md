@@ -71,7 +71,13 @@ builds/   (outputs only)
   Authority : PRODUCT_LAW.md + POLICY.md + approved 004 contract
   Consumers : WebAi seats + future agents/projects
   Impact    : SYSTEMIC
-  Status    : OBSERVED
+  Status    : ADVANCED / FROZEN
+
+005-dynamic-skill-resolution-scale-adaptation
+  Authority : PRODUCT_LAW.md + POLICY.md + approved 005 contract
+  Consumers : WebAi seats + future agents/projects
+  Impact    : SYSTEMIC
+  Status    : OBSERVED / ACTIVE
 ```
 
 ### Field 1 — Backend
@@ -117,7 +123,8 @@ builds/   (outputs only)
 | 001 | Foundation         | foundation| project-scaffold               | BOUNDED   | ADVANCED | 001-foundation-project-scaffold.md |
 | 002 | Foundation         | foundation| project-status                 | BOUNDED   | ADVANCED | 002-foundation-project-status.md |
 | 003 | Foundation         | governance| self-protecting-universal-foundation | SYSTEMIC | ADVANCED | 003-self-protecting-universal-foundation.md |
-| 004 | Foundation         | foundation| responsibility-unit-seat-model | SYSTEMIC  | OBSERVED | 004-responsibility-unit-seat-model.md |
+| 004 | Foundation         | foundation| responsibility-unit-seat-model | SYSTEMIC  | ADVANCED | 004-responsibility-unit-seat-model.md |
+| 005 | Foundation         | foundation| dynamic-skill-resolution-scale-adaptation | SYSTEMIC | OBSERVED | 005-dynamic-skill-resolution-scale-adaptation.md |
 
 **Status values (strict order):**  
 `TODO → OBSERVED → RECORDED → UNDERSTOOD → CLASSIFIED → ALIGNED → VALIDATED → ENDORSED → ADVANCED`
@@ -148,12 +155,12 @@ Prefer LOCAL or BOUNDED. Use SYSTEMIC only when necessary (and trigger `safety-r
 
 | Item                    | Value                                      |
 |-------------------------|--------------------------------------------|
-| **Current XXX**         | 004                                        |
+| **Current XXX**         | 005                                        |
 | **Status**              | OBSERVED                                   |
 | **Current Field**       | Foundation                                 |
-| **Next XXX**            | 005 (after 004 is advanced)               |
+| **Next XXX**            | 006 (after 005 is advanced)                |
 | **Open Investigations** | none                                       |
-| **Last Checkpoint**     | 003 merge reconciliation                   |
+| **Last Checkpoint**     | 004 frozen baseline                        |
 | **Active Findings**     | 1                                          |
 
 ---

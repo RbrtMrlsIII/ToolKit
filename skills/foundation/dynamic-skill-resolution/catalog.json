@@ -1,0 +1,24 @@
+{
+  "schema": "toolkit.skill-catalog.v1",
+  "skills": [
+    {"id":"scale-adapter","project_types":["ALL"],"fields":["Foundation"],"tasks":["scale","allocation","capacity"]},
+    {"id":"roots-definer","project_types":["ALL"],"fields":["ALL"],"tasks":["architecture","roots","scope"]},
+    {"id":"phase-planner","project_types":["ALL"],"fields":["ALL"],"tasks":["planning","phase","XXX"]},
+    {"id":"anti-pattern-checker","project_types":["ALL"],"fields":["ALL"],"tasks":["analysis","safety","knowledge"]},
+    {"id":"observe","project_types":["ALL"],"fields":["ALL"],"tasks":["observe","inspection"]},
+    {"id":"record","project_types":["ALL"],"fields":["ALL"],"tasks":["evidence","finding","record"]},
+    {"id":"understand","project_types":["ALL"],"fields":["ALL"],"tasks":["analysis","relationships"]},
+    {"id":"classify","project_types":["ALL"],"fields":["ALL"],"tasks":["classification","impact"]},
+    {"id":"align","project_types":["ALL"],"fields":["ALL"],"tasks":["authority","implementation","alignment"]},
+    {"id":"validate","project_types":["ALL"],"fields":["ALL"],"tasks":["verification","tests","validation"]},
+    {"id":"census-runner","project_types":["ALL"],"fields":["ALL"],"tasks":["census","structure","inventory"]},
+    {"id":"file-update-protocol","project_types":["ALL"],"fields":["ALL"],"tasks":["documents","continuity","synchronization"]},
+    {"id":"endorse","project_types":["ALL"],"fields":["ALL"],"tasks":["endorsement","approval"]},
+    {"id":"advance","project_types":["ALL"],"fields":["ALL"],"tasks":["checkpoint","advancement"]}
+  ],
+  "allocation_profiles": {
+    "2": ["discovery-planning-analysis","implementation-verification-operations"],
+    "4": ["discovery-planning","research-design","implementation","verification-operations"],
+    "8": ["discovery","planning","research","design","implementation","verification","operations","review-coordination"]
+  }
+}
