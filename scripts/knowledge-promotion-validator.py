@@ -3,14 +3,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
-import yaml
 
 ALLOWED = {"UNIVERSAL", "ADAPTABLE", "CONSUMER-SPECIFIC", "EPHEMERAL"}
 
 
 def validate(path: Path) -> None:
-    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    data = json.loads(path.read_text(encoding="utf-8"))
     required = [
         "source_project", "source_finding", "source_evidence",
         "classification", "proposed_claim", "validation",
