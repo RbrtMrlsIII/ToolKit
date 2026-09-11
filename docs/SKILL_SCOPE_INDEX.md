@@ -25,6 +25,7 @@
 | anti-pattern-checker | Knowledge | ALL | prevent known failure repetition |
 | knowledge-distiller | Knowledge | ALL | generalize validated lessons upstream |
 | knowledge-promotion | Knowledge / Governance | ALL | classify, validate, and promote generalized reusable lessons without consumer-authority leakage |
+| canonical-evolution-integrity | Governance | ALL | protect canonical knowledge lineage while allowing authorized migration/retirement |
 | minimalism-enforcer | Knowledge | ALL | prevent unnecessary growth/noise |
 | checkpoint-creator | Continuity | ALL | preserve durable stopping point |
 | census-runner | Governance/Structure | ALL | inventory/cleanliness/enforcement |
