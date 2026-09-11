@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+"""Executable tests for Toolkit 006 knowledge-promotion boundaries."""
 from __future__ import annotations
 
 import json
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -11,9 +13,9 @@ VALIDATOR = ROOT / "scripts/knowledge-promotion-validator.py"
 FIXTURE = ROOT / "validation/knowledge-promotion/006-teamai-canonical-integrity.json"
 
 
-def run(path: Path) -> subprocess.CompletedProcess[str]:
+def run(record: Path) -> subprocess.CompletedProcess[str]:
     return subprocess.run(
-        [sys.executable, str(VALIDATOR), str(path)],
+        [sys.executable, str(VALIDATOR), str(record)],
         cwd=ROOT,
         text=True,
         capture_output=True,
@@ -21,34 +23,34 @@ def run(path: Path) -> subprocess.CompletedProcess[str]:
     )
 
 
-def test_pending_universal_candidate_is_blocked_until_endorsement() -> None:
+def main() -> int:
+    # Pending universal candidate must not become permanent without endorsement.
     result = run(FIXTURE)
-    assert result.returncode != 0
-    assert "requires endorsement" in result.stderr
+    assert result.returncode != 0, "pending universal promotion unexpectedly passed"
+    assert "requires endorsement" in result.stderr, result.stderr
+
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp_path = Path(tmp)
+        data = json.loads(FIXTURE.read_text(encoding="utf-8"))
+
+        # Consumer-specific dependency may not be promoted as universal.
+        invalid = tmp_path / "invalid-consumer-dependency.json"
+        invalid_data = {**data, "endorsement": "APPROVED", "consumer_dependency": "EXPLICIT"}
+        invalid.write_text(json.dumps(invalid_data), encoding="utf-8")
+        result = run(invalid)
+        assert result.returncode != 0, "consumer-specific universal promotion unexpectedly passed"
+        assert "consumer-specific dependency" in result.stderr, result.stderr
+
+        # Fully validated and endorsed universal candidate passes.
+        valid = tmp_path / "valid-universal.json"
+        valid.write_text(json.dumps({**data, "endorsement": "APPROVED"}), encoding="utf-8")
+        result = run(valid)
+        assert result.returncode == 0, result.stderr
+        assert "knowledge-promotion: PASS" in result.stdout, result.stdout
+
+    print("knowledge-promotion tests: PASS")
+    return 0
 
 
-def test_consumer_specific_dependency_cannot_be_universal() -> None:
-    data = json.loads(FIXTURE.read_text(encoding="utf-8"))
-    data["endorsement"] = "APPROVED"
-    data["consumer_dependency"] = "EXPLICIT"
-    temp = ROOT / "validation/knowledge-promotion/006-invalid-consumer-dependency.json"
-    temp.write_text(json.dumps(data), encoding="utf-8")
-    try:
-        result = run(temp)
-        assert result.returncode != 0
-        assert "consumer-specific dependency" in result.stderr
-    finally:
-        temp.unlink()
-
-
-def test_endorsed_universal_candidate_passes() -> None:
-    data = json.loads(FIXTURE.read_text(encoding="utf-8"))
-    data["endorsement"] = "APPROVED"
-    temp = ROOT / "validation/knowledge-promotion/006-valid-universal.json"
-    temp.write_text(json.dumps(data), encoding="utf-8")
-    try:
-        result = run(temp)
-        assert result.returncode == 0
-        assert "knowledge-promotion: PASS" in result.stdout
-    finally:
-        temp.unlink()
+if __name__ == "__main__":
+    raise SystemExit(main())
